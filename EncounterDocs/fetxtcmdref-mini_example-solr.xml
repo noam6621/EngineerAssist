@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<add>
+	<doc>
+		<field name="id">ecoDeleteRepeater</field>
+		<field name="command_name">ecoDeleteRepeater</field>
+		<field name="command_syntax">ecoDeleteRepeater -inst list_of_instances [-evaluateOnly]</field>
+		<field name="command_description">Deletes a buffer or pair of inverters connected back-to-back.
+			This command merges wires after ECO. This command does not modify dont_touch nets if setEcoMode -honorDontTouch is set to true.</field>
+		<field name="command_description_notes_count">1</field>
+		<field name="command_description_note0">The ecoDeleteRepeater command is simultaneous setup/hold and MMMC aware.
+			To make the command simultaneous setup/hold aware, set the global variable set_global timing_enable_simultaneous_setup_hold_mode to true.
+			The simultaneous setup/hold mode can only be used for timing analysis. It cannot be used for any physical implementation steps.</field>
+		<field name="command_parameters_count">2</field>
+		<field name="command_parameter_syntax0">-evaluateOnly</field>
+		<field name="command_parameter_description0">Evaluates the effect on timing, if you delete the specified cell.
+			The values are not applied in the database.</field>
+		<field name="command_parameter_syntax1">- inst list_of_instances</field>
+		<field name="command_parameter_description1">Specifies a buffer or inverter to delete. If you specify an inverter, the command finds another inverter on the net and deletes the back-to-back pair in order to preserve the logical equivalence. Instances are deleted only if they are tied to each other.
+			To specify a pair of instances, enclose the instances in braces.
+			-inst { inst1 inst2 }</field>
+		<field name="command_parameters_notes_count">1</field>
+		<field name="command_parameters_note0">You can specify the following using the setEcoMode command:
+			setEcoMode -honorDontUse false to modify instances which have dontUse attribute on cells.
+			setEcoMode -honorDontTouch false to modify instance/nets which are marked dontTouch.</field>
+		<field name="command_examples_count">4</field>
+		<field name="command_example_description0">The following command deletes the specified buffer, A/inst1</field>
+		<field name="command_example_syntax0">ecoDeleteRepeater -inst A/inst1</field>
+		<field name="command_example_description1">The following command deletes a back-to-back inverter pair containing A/inv1</field>
+		<field name="command_example_syntax1">ecoDeleteRepeater -inst A/inv1</field>
+		<field name="command_example_description2">The following command deletes the instance containing DTMF_INST/ TDSP_CORE_INST/i_10177 and evaluates the effect on timing</field>
+		<field name="command_example_syntax2">ecoDeleteRepeater -inst DTMF_INST/TDSP_CORE_INST/i_10177 -evaluateOnly</field>
+		<field name="command_example_description3">The following command deletes instances DTMF_INST/RESULTS_CONV_INST/ FE_PHC845_r1644_2_ and DTMF_INST/RESULTS_CONV_INST/ FE_PHC845_r1643_3_</field>
+		<field name="command_example_syntax3">ecoDeleteRepeater -evaluate_only -inst {DTMF_INST/RESULTS_CONV_INST/FE_PHC845_r1644_2_DTMF_INST/RESULTS_CONV_INST/FE_PHC845_r1643_3_}</field>
+	</doc>
+	<doc>
+		<field name="id">ecoChangeCell</field>
+		<field name="command_name">ecoChangeCell</field>
+		<field name="command_syntax">ecoChangeCell -cell list_of_cells |-upsize | -downsize | -evaluateAll [-bufOrient {R0 | R90 | R180 | R270 | MX | MX90 | MY | MY90}] -inst instNames [-loc {xLoc yLoc}] [-pinMap oldpin1 newpin1 oldpin2 newpin2 ...] [-evaluateOnly | -evaluateAll]</field>
+		<field name="command_description">Upsizes or downsizes the specified instance based on the available footprint. Cell mapping is also possible as long as the output pins are functionally the same.
+			This command also checks for and observes power domains.
+			This command does not modify dont_touch nets if setEcoMode -honorDontTouch is set to true.</field>
+		<field name="command_description_notes_count">4</field>
+		<field name="command_description_note0">If you use the ecoChangeCell command to modify a ` fixed ' instance, the software issues a warning message.
+			Instead, you can specify the following using the setEcoMode command:
+			setEcoMode -honorFixedStatus false , to modify FIXED instance.
+			setEcoMode -honorDontUse false to modify instances which have dontUse attribute on cells.
+			setEcoMode -honorDontTouch false to modify instance/nets which are marked dontTouch.</field>
+		<field name="command_description_note1">The ecoChangeCell command is simultaneous setup/hold and MMMC aware.
+			To make the command simultaneous setup/hold aware, set the global variable set_global timing_enable_simultaneous_setup_hold_mode to true.
+			The simultaneous setup/hold mode can only be used for timing analysis.
+			It cannot be used for any physical implementation steps.</field>
+		<field name="command_description_note2">When resizing instances inside multiple-instantiated blocks, the resize would be applied to all instantiations of the block.</field>
+		<field name="command_description_note3">You can change a buffer to a pair of inverters using the ecoDeleteRepeater and ecoAddRepeater commands.
+			You can change a buffer to an inverter by first using setEcoMode -LEQCheck false and then using ecoChangeCell.
+			However, please note that it results in the change in logic.</field>
+		<field name="command_parameters_count">9</field>
+		<field name="command_parameter_syntax0">-bufOrient {R0 | R90 | R180 | R270 | MX | MX90 | MY | MY90}</field>
+		<field name="command_parameter_description0">Evaluates the effect on timing, if you delete the specified cell.
+			The values are not applied in the database.</field>
+		<field name="command_parameter_syntax1">-evaluateAll</field>
+		<field name="command_parameter_description1">Evaluates the effect on timing for all the cell types available for the new cell.
+			The timing report shows the effects of all the cell types, enabling you to select the best cell for your design.
+			The values are not applied in the database.</field>
+		<field name="command_parameter_syntax2">-evaluateOnly</field>
+		<field name="command_parameter_description2">Evaluates the effect on timing, if you modify the specified cell.
+			The values are not applied in the database.</field>
+		<field name="command_parameter_syntax3">-inst instNames</field>
+		<field name="command_parameter_description3">Specifies the names of the instances to be changed.</field>
+		<field name="command_parameter_syntax4">-loc {xLoc yLoc}</field>
+		<field name="command_parameter_description4">Specifies the legalized location where the instance will be placed.</field>
+		<field name="command_parameter_syntax5">-upsize</field>
+		<field name="command_parameter_description5">Upsizes the specified instance with the next available cell in the same footprint unless the specified cell is already of the highest driving strength.
+			Upsizing an instance that drives a large load can improve the driver delay and the transition time at the receivers.</field>
+		<field name="command_parameter_syntax6">-downsize</field>
+		<field name="command_parameter_description6">Downsizes the specified instance with the next available cell in the same footprint unless the specified cell is already of the lowest driving strength.
+			Downsizing an instance on the noncritical path can reduce the loading of its driver on the critical path.</field>
+		<field name="command_parameter_syntax7">-cell list_of_cells</field>
+		<field name="command_parameter_description7">Specifies the name of a specific cell(s) to be substituted in the design.
+			The function of the original cell has to match the function of the new cell for all the outputs used by the old cell.
+			The original master cell and the new master cell must have exactly same number of pins.</field>
+		<field name="command_parameter_syntax8">-pinMap oldpin1 newpin1 oldpin2 newpin2</field>
+		<field name="command_parameter_description8">Specifies the pin mapping for the new cell based on the old cell.
+			This option is required if the new master cell has different pin names than the original cell.
+			The net connected to oldpin1 of the original cell should be connected to newpin1 of the new cell, and so forth.</field>
+		<field name="command_parameters_notes_count">0</field>
+		<field name="command_examples_count">5</field>
+		<field name="command_example_description0">Upsizes the specified instance</field>
+		<field name="command_example_syntax0">ecoChangeCell -inst Top_I18 -upsize</field>
+		<field name="command_example_output0"></field>
+		<field name="command_example_description1">Downsizes the specified instance</field>
+		<field name="command_example_syntax1">ecoChangeCell -inst Top_I18 -downsize</field>
+		<field name="command_example_description2">Modifies the specified instance according to the specified cell</field>
+		<field name="command_example_syntax2">ecoChangeCell -inst Top_I18 -cell BUFX20</field>
+		<field name="command_example_description3">Changes to another cell with a different pin name</field>
+		<field name="command_example_syntax3">ecoChangeCell -inst Top_I27 -cell TXOR2X2 -PINMAP A X B Y Y Z</field>
+		<field name="command_example_description4">Downsizes the specified instance and evaluates timing after you modified the instance</field>
+		<field name="command_example_syntax4">ecoChangeCell -inst Top_I18 -downsize -evaluateOnly</field>
+	</doc>
+	<doc>
+		<field name="id">report_clocks</field>
+		<field name="command_name">report_clocks</field>
+		<field name="command_syntax">report_clocks [-description] [-arrival_points] [-phase_shift_table] [-total_shift_table] [-uncertainty_table] [-adjustment_table] [-delay_adjustment_table] [-source_insertion] [-insertion] [-hierarchy] [-groups] [-clocks clk_signame | clk_signame_list ] [-view view_name ] [{> | >>} filename | -tcl_list]</field>
+		<field name="command_description">Reports information on clocks created with the create_clock and create_generated_clock command.
+			The report includes information about all clock waveforms, clock arrival points, and clock uncertainties.
+			Use the -description , -arrival_points , -uncertainty_table , and the *_table parameters to specify different parts of the report.
+			If one of these options is supplied, only the section that the option corresponds to is reported.
+			If other options are supplied, those sections are also reported.
+			Based on the current setup or hold analysis mode, the following parameters report only one of the late or early tables:
+			-phase_shift_table
+			-total_shift_table
+			-uncertainty_table
+			-adjustment_table
+			-delay_adjustment_table
+			However, in simultaneous (setup and hold) mode both the tables are reported.
+			The report_clocks command only reports constraints with respect to clock waveforms.
+			Use the report_ports -type command for constraints applied to clock pins.</field>
+		<field name="command_description_notes_count">0</field>
+		<field name="command_parameters_count">16</field>
+		<field name="command_parameter_syntax0">{> | >>} filename</field>
+		<field name="command_parameter_description0">When specified with > , writes the report to the specified file name.
+			If the file already exists, the software overwrites it.
+			When specified with >> , writes the report to the specified file name.
+			If the file already exists, the software concatenates the report to the end of the file.
+			The filename parameter must be the last argument in the list.
+			The filename and -tcl_list parameters are mutually exclusive; you cannot specify them together.
+			Note: To write a compressed report, add the .gz extension to the file name.
+			Default: Report is displayed on standard output without being saved.</field>
+		<field name="command_parameter_syntax1">-adjustment_table</field>
+		<field name="command_parameter_description1">Reports two tables that detail the hold and setup cycle adjustments between clock waveforms as set by the set_multicycle_path command.
+			Note: If specific ideal (or generated) clocks are requested with the -clocks clock_name_list option, then only the relationships between those clock signals are reported.</field>
+		<field name="command_parameter_syntax2">-arrival_points</field>
+		<field name="command_parameter_description2">Reports only the clock arrival points.
+			A clock arrival point is the pin where the create_clock or create_generated_clock command has been asserted.
+			Note: This parameter is obsolete and will be removed in a future release.</field>
+		<field name="command_parameter_syntax3">-clocks clk_signame | clk_signame_list</field>
+		<field name="command_parameter_description3">Requests information on a specific ideal (or generated) clock.
+			If a list is given, only information about those clocks is reported.
+			You can use wildcards in the names.
+			Default : All clocks, except generated clocks, are reported.
+			Use the -generated option to report generated clocks.
+			This parameter is obsolete and will be removed in a future release.
+			Cadence recommends that you specify clock names without the -clocks parameter.</field>
+		<field name="command_parameter_syntax4">-delay_adjustment_table</field>
+		<field name="command_parameter_description4">Reports two tables that detail the early and late path delay adjustments between clock waveforms as set by the set_max_delay and set_min_delay commands.
+			Note: If specific ideal (or generated) clocks are requested with the -clocks clock_name_list option, then only the relationships between those clock signals are reported.</field>
+		<field name="command_parameter_syntax5">-description</field>
+		<field name="command_parameter_description5">Reports only the description of the specified clock waveform(s).</field>
+		<field name="command_parameter_syntax6">-generated</field>
+		<field name="command_parameter_description6">Includes information on generated clocks in the report, such as source and master clock of the generated clock, and other information specified in the create_generated_clock constraints.
+			The report uses the internal clock names created by the system, if you did not specify new clock names while creating these clocks.
+			This parameter is obsolete and will be removed in a future release.
+			The software now reports generated clocks by default.</field>
+		<field name="command_parameter_syntax7">-groups</field>
+		<field name="command_parameter_description7">Reports the existing clock groups.</field>
+		<field name="command_parameter_syntax8">-hierarchy</field>
+		<field name="command_parameter_description8">Reports the inter-clock relationship in tree style format.</field>
+		<field name="command_parameter_syntax9">-insertion</field>
+		<field name="command_parameter_description9">Reports the network insertion delays specified on clock waveforms.
+			The values in the table are in min:typ:max format.</field>
+		<field name="command_parameter_syntax10">-phase_shift_table</field>
+		<field name="command_parameter_description10">Reports the table that details the phase shift between clock waveforms.
+			Based upon the current analysis mode, the table shows the phase shifts either in late or early mode.
+			In case of simultaneous setup hold mode, both the tables are reported for phase shift in late and early mode.
+			Note: If specific ideal (or generated) clocks are requested with the -clocks clock_name_list option, then only the relationships between those clock signals are reported.</field>
+		<field name="command_parameter_syntax11">-source_insertion</field>
+		<field name="command_parameter_description11">Reports the source insertion delays specified on clock waveforms.</field>
+		<field name="command_parameter_syntax12">-tcl_list</field>
+		<field name="command_parameter_description12">Produces the report in Tcl list format instead of a tabular format.
+			This is useful for integrating timing with custom Tcl functions, and also for customizing report generation.
+			The -tcl_list and filename parameters are mutually exclusive; you cannot specify them together.</field>
+		<field name="command_parameter_syntax13">-total_shift_table</field>
+		<field name="command_parameter_description13">Based on the current analysis mode, reports one of the tables (late or early mode) that details the total relationship between clock waveforms.
+			In case of simultaneous setup hold mode both the tables are reported.
+			Note: If specific ideal (or generated) clocks are requested with the -clocks clock_name_list option, then only the relationships between those clock signals are reported.</field>
+		<field name="command_parameter_syntax14">-uncertainty_table</field>
+		<field name="command_parameter_description14">Based on the current analysis mode, reports one of the tables (late mode or early mode) that detail the uncertainty between clock waveforms as specified using the set_clock_uncertainty command.
+			In case of simultaneous setup hold mode both the tables are reported.
+			The tables report only those clock waveforms for which uncertainty has been defined using the set_clock_uncertainty command.
+			Note: If specific ideal (or generated) clocks are requested with the -clocks clock_name_list option, then only the relationships between those clock signals are reported.</field>
+		<field name="command_parameter_syntax15">-view view_name</field>
+		<field name="command_parameter_description15">Generates a clock report for the specified analysis view only.
+			You can specify this parameter only when the software is in multi-mode multicorner timing analysis mode.</field>
+		<field name="command_parameters_notes_count">0</field>
+		<field name="command_examples_count">7</field>
+		<field name="command_example_description0">The following command displays the default report</field>
+		<field name="command_example_syntax0">report_clocks</field>
+		<field name="command_example_output0">Example 38-7 report_clocks Report
+			-------------------------------------------------------------------------------------
+			Clock Descriptions
+			-------------------------------------------------------------------------------------
+			Attributes
+			-------------------------------------------------------------------------------------
+			Clock Name Source Period Lead Trail Generated Propagated
+			-------------------------------------------------------------------------------------
+			CLK_W_1 CLK1 20.000 0.000 10.000 n y
+			CLK_W_2 CLK2 25.000 0.000 12.500 n y
+			CLK_W_3 CLK3 2.000 0.000 1.000 n y
+			CLK_W_4 CLK4 10.000 0.000 6.000 n y
+			CLK_W_4_gen1 u8/Q 20.000 0.000 10.000 y y
+			CLK_W_4_gen2 u2/Q u8/Q 20.000 0.000 10.000 y y
+			CLK_W_4_gen3 OUT3 20.000 0.000 10.000 y y
+			-------------------------------------------------------------------------------------
+			------------------------------------------------------------------------------------------------
+			---------
+			Generated-Clock Descriptions
+			------------------------------------------------------------------------------------------------
+			---------
+			Name Generated Master Master-clock Invert Freq. Duty-Cycle Edges
+			Edge-Shift
+			Source(pin) Source(pin) Multiplier
+			------------------------------------------------------------------------------------------------
+			---------
+			CLK_W_4_gen1 u8/Q CLK4 CLK_W_4 n 1/2 - -
+			-
+			CLK_W_4_gen2 u2/Q u8/Q CLK4 CLK_W_4 n 1/2 - -
+			-
+			CLK_W_4_gen3 OUT3 u8/Q CLK_W_4_gen1 n - - -
+			-
+			------------------------------------------------------------------------------------------------
+			--------</field>
+		<field name="command_example_description1">The following command displays only the uncertainty information</field>
+		<field name="command_example_syntax1">set_clock_uncertainty 5 CLK_W_1 set_clock_uncertainty 4 -from CLK_W_1 -to CLK_W_4_gen1set_clock_uncertainty 6 -from CLK_W_2 -to CLK_W_4_gen2 report_clocks -uncertainty_table</field>
+		<field name="command_example_output1">Example 38-8 report_clocks -uncertainty_table Report
+			-------------------------------------------------------- --
+			Clock To Clock Uncertainty (Late)
+			-------------------------------------------------------- --
+			From To L->L L->T T->L T->T
+			-------------------------------------------------------- --
+			* CLK_W_1 5.000 5.000 5.000 5.000
+			CLK_W_1 CLK_W_4_gen1 4.000 4.000 4.000 4.000
+			CLK_W_2 CLK_W_4_gen2 6.000 6.000 6.000 6.000
+			-------------------------------------------------------- -- -
+			-----------------------------------------------------------
+			Clock To Clock Uncertainty (Early)
+			-----------------------------------------------------------
+			From To L->L L->T T->L T->T
+			-----------------------------------------------------------
+			* CLK_W_1 -5.000 -5.000 -5.000 -5.000
+			CLK_W_1 CLK_W_4_gen1 -4.000 -4.000 -4.000 -4.000
+			CLK_W_2 CLK_W_4_gen2 -6.000 -6.000 -6.000 -6.000
+			-----------------------------------------------------------</field>
+		<field name="command_example_description2">Consider the following clock definition</field>
+		<field name="command_example_syntax2">create_clock -name "CLK_W_1" -add -period 60 -waveform {0 30} report_clocks CLK_W_1 -phase_shift_table</field>
+		<field name="command_example_output2">When you specify the report_clocks command, the following phase shift table is displayed:
+			------------------------------------------------------
+			Clock To Clock Phase Shift (Late)
+			------------------------------------------------------
+			From To L->L L->T T->L T->T
+			------------------------------------------------------
+			CLK_W_1 CLK_W_1 60.000 0.000 60.000 60.000
+			------------------------------------------------------
+			------------------------------------------------------
+			Clock To Clock Phase Shift (Early)
+			------------------------------------------------------
+			From To L->L L->T T->L T->T
+			------------------------------------------------------
+			CLK_W_1 CLK_W_1 0.000 -60.000 0.000 0.000
+			------------------------------------------------------
+			In this case, L->L has phase shift 6 which means that the path starts from the leading edge of the first period and ends at the leading edge of the second period.
+			L->T has phase shift 0 which means that the path starts from the leading edge of the first period and ends at the trailing edge of the first period.
+			T->L has phase shift 6 which means that the path starts from the trailing edge of first period and ends at the leading edge of the second period.
+			T->T has phase shift 6 which means that the path starts from the trailing edge of the first period and ends at the trailing edge of the second period.
+			You can use the following command to add uncertainty:
+			set_clock_uncertainty 2 CLK_W_1</field>
+		<field name="command_example_description3">The phase shift and total shift table values will be different.
+			The following command displays the changed shift values as given below</field>
+		<field name="command_example_syntax3">report_clocks -total_shift_table CLK_W_1</field>
+		<field name="command_example_output3">---------------------------------------------------
+			Total Clock To Clock Phase Shift Required (Late)
+			---------------------------------------------------
+			From To L->L L->T T->L T->T
+			---------------------------------------------------
+			CLK_W_1 CLK_W_1 58.000 -2.000 58.000 58.000
+			---------------------------------------------------
+			---------------------------------------------------
+			Total Clock To Clock Phase Shift Required (Early)
+			---------------------------------------------------
+			From To L->L L->T T->L T->T
+			---------------------------------------------------
+			CLK_W_1 CLK_W_1 2.000 -58.000 2.000 2.000
+			---------------------------------------------------
+			You can see that the uncertainty is subtracted from the phase shift.
+			Consider the following example path:
+			Path 1: MET Setup Check with Pin u2/CK
+			Endpoint: u2/D (v) checked with leading edge of 'CLK_W_1'
+			Beginpoint: CLK2 (v) triggered by trailing edge of 'CLK_W_2'
+			Path Groups: {CLK_W_1}
+			Other End Arrival Time 0.000
+			- Setup 0.188
+			+ Phase Shift 15.000
+			- Uncertainty 2.000
+			= Required Time 12.812
+			- Arrival Time 12.463
+			= Slack Time 0.349
+			Clock Fall Edge 12.500
+			= Beginpoint Arrival Time 12.500
+			----------------------------------------------------------------------
+			Load Slew Delay Arrival Time Cell Arc Pin
+			
+			----------------------------------------------------------------------
+			0.034 0.003 12.500 CLK2 v CLK2
+			0.003 0.003 -0.037 12.463 BUF A v -> Y v u10999/Y
+			0.003 0.003 0.000 12.463 DFF D v u2/D
+			----------------------------------------------------------------------
+			Here the begin point div_2_clk to end point std_clk shows a phase shift value of 15.00. This
+			means that if a path starts from the falling edge of CLK_W_2 , and ends at the rising edge of CLK_W_1 ,
+			the phase shift is 15.00. In other words, when the timing (setup time) is reported, the required time
+			at the end point begins with 15.00 (in addition to adjustments like setup time, time borrowing,
+			uncertainty, etc). However, the arrival time of this path starts at 12.500.</field>
+		<field name="command_example_description4">When the software is in multi-mode multi-corner timing analysis mode, the software reports the clock information for each active analysis view</field>
+		<field name="command_example_syntax4">report_clocks -total_shift_table -description</field>
+		<field name="command_example_output4">------------------------------------------------------------------------------------------
+			Clock Descriptions
+			------------------------------------------------------------------------------------------
+			Attributes
+			------------------------------------------------------------------------------------------
+			Clock Name Source View Period Lead Trail Generated
+			Propagated
+			------------------------------------------------------------------------------------------
+			EJ_TCK EJ_TCK hold_view2 17.400 0.000 8.700 n n
+			EJ_TCK EJ_TCK hold_view1 17.400 0.000 8.700 n
+			n
+			EJ_TCK EJ_TCK setup_view1 17.400 0.000 8.700 n
+			n
+			EJ_TCK EJ_TCK setup_view2 17.400 0.000 8.700 n
+			n
+			------------------------------------------------------------------------------------------
+			-----------------------------------------------------------------
+			Total Clock To Clock Phase Shift Required (Late)
+			-----------------------------------------------------------------
+			From To View L->L L->T T->L T->T
+			-----------------------------------------------------------------
+			EJ_TCK EJ_TCK hold_view2 17.400 0.000 17.400 17.400
+			EJ_TCK EJ_TCK hold_view1 17.400 0.000 17.400 17.400
+			EJ_TCK EJ_TCK setup_view1 17.400 0.000 17.400 17.400
+			EJ_TCK EJ_TCK setup_view2 17.400 0.000 17.400 17.400
+			------------------------------------------------------------------</field>
+		<field name="command_example_description5">Specify the -view parameter to generate clock information for a specific analysis view only</field>
+		<field name="command_example_syntax5">report_clocks -total_shift_table -description -view setup_view1 > clk_sv1</field>
+		<field name="command_example_output5">---------------------------------------------------------------------------------------
+			Clock Descriptions
+			---------------------------------------------------------------------------------------
+			Attributes
+			---------------------------------------------------------------------------------------
+			Clock Name Source View Period Lead Trail Generated Propagated
+			---------------------------------------------------------------------------------------
+			EJ_TCK EJ_TCK setup_view1 17.400 0.000 8.700 n n
+			virt_in_EJ_TCK - setup_view1 17.400 0.000 8.700 n n
+			---------------------------------------------------------------------------------------
+			---------------------------------------------------------------------------------------
+			Total Clock To Clock Phase Shift Required (Late)
+			---------------------------------------------------------------------------------------
+			From To View L->L L->T T->L T->T
+			---------------------------------------------------------------------------------------
+			EJ_TCK EJ_TCK setup_view1 17.400 0.000 17.400 17.400
+			EJ_TCK virt_in_EJ_TCK setup_view1 17.400 0.000 17.400 17.400
+			virt_in_EJ_TCK EJ_TCK setup_view1 17.400 0.000 17.400 17.400
+			virt_in_EJ_TCK virt_in_EJ_TCK setup_view1 17.400 0.000 17.400 17.400
+			---------------------------------------------------------------------------------------</field>
+		<field name="command_example_description6">The report_clocks command output displays a column showing active or inactive clocks in the design</field>
+		<field name="command_example_syntax6">report_clocks</field>
+		<field name="command_example_output6">--------------------------------------------------------------------------------------------------------------
+			-------------
+			Clock Descriptions
+			--------------------------------------------------------------------------------------------------------------
+			-------------
+			Attributes
+			--------------------------------------------------------------------------------------------------------------
+			-------------
+			Clock Name Source Period Lead Trail Generated Propagated Active
+			--------------------------------------------------------------------------------------------------------------
+			-------------
+			CLK_W_1 CLK1 20.000 0.000 10.000 n y y
+			CLK_W_2 CLK2 25.000 0.000 12.500 n y y
+			CLK_W_3 CLK3 2.000 0.000 1.000 n y n
+			CLK_W_4 CLK4 10.000 0.000 6.000 n y y
+			CLK_W_4_gen1 u8/Q 20.000 0.000 10.000 y y y
+			CLK_W_4_gen2 u2/Q u8/Q 20.000 0.000 10.000 y y y
+			CLK_W_4_gen3 OUT3 20.000 0.000 10.000 y y n
+			--------------------------------------------------------------------------------------------------------------
+			-------------
+			Here, only Iclk2 is inactive.</field>
+	</doc>
+	<doc>
+		<field name="id">alignObject</field>
+		<field name="command_name">alignObject</field>
+		<field name="command_syntax">alignObject [-help] -side {right | left | center | top | bottom | middle} [-referToFirst] [-mix]</field>
+		<field name="command_description">Aligns objects (instances, modules, or blockages) vertically or horizontally in the floorplan.
+			Use this command after selecting two or more objects in the design display area.</field>
+		<field name="command_description_notes_count">0</field>
+		<field name="command_parameters_count">4</field>
+		<field name="command_parameter_syntax0">-help</field>
+		<field name="command_parameter_description0">Outputs a brief description that includes the type and default information for each alignObject parameter.
+			For a detailed description of the command and all of its parameters, use the man command: man alignObject</field>
+		<field name="command_parameter_syntax1">-mix</field>
+		<field name="command_parameter_description1">Considers all the selected objects together while aligning them.</field>
+		<field name="command_parameter_syntax2">-referToFirst</field>
+		<field name="command_parameter_description2">Specifies a reference object highlighted in the design display area.
+			If you specify this option, the first selected object is the reference object.</field>
+		<field name="command_parameter_syntax3">-side {right | left | center | top | bottom | middle}</field>
+		<field name="command_parameter_description3">Specifies the vertical and horizontal alignment for the selected objects.
+			Choose one of the following:
+			right : Specifies vertical right alignment.
+			left : Specifies vertical left alignment.
+			center : Specifies vertical center alignment.
+			top : Specifies horizontal top alignment.
+			bottom : Specifies horizontal bottom alignment.
+			middle : Specifies horizontal middle alignment.
+			Default : left</field>
+		<field name="command_parameters_notes_count">0</field>
+		<field name="command_examples_count">1</field>
+		<field name="command_example_description0">The following command aligns highlighted objects vertically to the left</field>
+		<field name="command_example_syntax0">alignObject -side left</field>
+		<field name="command_example_output0"></field>
+		<field name="command_related_global">flipchip_move_bump_ignore_routed</field>
+	</doc>
+	<doc>
+		<field name="id">analyzeFloorplan</field>
+		<field name="command_name">analyzeFloorplan</field>
+		<field name="command_syntax">analyzeFloorplan [-help] [-outfile fileName ] [-prePlaceOpt] [[-fp | [[-congestion ] [[-timing ] | [-timing_aware_route [-incremental ]]]]] [-effort {low | medium | high}]]</field>
+		<field name="command_description">Analyzes the floorplan, and reports basic design information.
+			To report wire length, congestion, and timing information in addition to basic design information, specify the -congestion and -timing parameters.
+			The analyzeFloorplan command can be used with floorplans generated by Automatic Floorplan Synthesis, generated manually, or generated by a third-party tool.
+			To use the analyzeFloorplan command, the following information must exist in the design:
+			Verilog netlist
+			Physical library (LEF) file
+			Timing library (.lib) file
+			SDC constraint (.sdc) file
+			Additionally, macros in the floorplan must be marked FIXED before running analyzeFloorplan.</field>
+		<field name="command_description_notes_count">1</field>
+		<field name="command_description_note0">For designs having flex models, when the -effort parameter of the set_proto_mode command is set to high, the -congestion and -timing parameters of the analyzeFloorplan command are enabled by default.
+			As a result, wire length and congestion, in addition to the timing information is reported.</field>
+		<field name="command_parameters_count">9</field>
+		<field name="command_parameter_syntax0">-help</field>
+		<field name="command_parameter_description0">Outputs a brief description that includes type and default information for each analyzeFloorplan parameter.
+			For a detailed description of the command and all of its parameters, use the man command: man analyzeFloorplan.</field>
+		<field name="command_parameter_syntax1">-congestion</field>
+		<field name="command_parameter_description1">Analyzes congestion for a prototyping design with legal placement.</field>
+		<field name="command_parameter_syntax2">-effort {low | medium | high}</field>
+		<field name="command_parameter_description2">Specifies the effort level to use for analysis.
+			The -effort parameter allows you to choose between analysis accuracy and run time levels.
+			low : Provides cluster mode placement (non-timing driven).
+			This results in low analysis accuracy, but a fast run time.
+			medium : Provides timing driven floorplan mode placement.
+			This results in medium analysis accuracy and run time.
+			high : Provides timing driven default placement ( placeDesign ).
+			This results in good analysis accuracy, but a longer run time.
+			Default : medium</field>
+		<field name="command_parameter_syntax3">-fp</field>
+		<field name="command_parameter_description3">Analyzes floorplan for a prototyping design with quick placement.</field>
+		<field name="command_parameter_syntax4">-incremental</field>
+		<field name="command_parameter_description4">Invokes timing driven Trial Route incrementally.</field>
+		<field name="command_parameter_syntax5">-prePlaceOpt</field>
+		<field name="command_parameter_description5">Enables pre-place optimization during the placement run.</field>
+		<field name="command_parameter_syntax6">-outfile fileName</field>
+		<field name="command_parameter_description6">Saves the report to the specified output file.
+			If you do not specify this parameter, the software saves the report to a file named analyzeFP.rpt in addition to showing it in the EDI System command window.</field>
+		<field name="command_parameter_syntax7">-timing</field>
+		<field name="command_parameter_description7">Analyzes timing and reports the total negative slack and worst negative slack for register-to-register paths.</field>
+		<field name="command_parameter_syntax8">-timing_aware_route</field>
+		<field name="command_parameter_description8">Invokes timing driven Trial Route for prototyping design.</field>
+		<field name="command_examples_count">2</field>
+		<field name="command_example_description0">The following command analyzes the floorplan and reports basic information on the design</field>
+		<field name="command_example_syntax0">analyzeFloorplan</field>
+		<field name="command_example_output0">The software generates the following report:
+			######################################################################################
+			# Generated by: Cadence Encounter 10.11-e004_1
+			# OS: Linux i686(Host ID icdlnx08s)
+			# Generated on: Mon Oct 11 15:29:06 2010
+			# Design: dtmf_chip
+			# Command: analyzeFloorplan
+			######################################################################################
+			************************* Analyze Floorplan ******************************************
+			 Die Area(um^2) : 2214144.000000
+			 Core Area(um^2) : 735512.054400
+			 Chip Density (Counting Std Cells and MACROs and IOs): 75.091%
+			 Core Density (Counting Std Cells and MACROs) : 65.841%
+			 Average utilization : 40.177%
+			 Number of instance(s) : 7761
+			 Number of Macro(s) : 40
+			 Number of IO Pin(s) : 57
+			 Number of Power Domain(s) : 1
+			************************* Estimation Results *****************************************
+			**************************************************************************************</field>
+		<field name="command_example_description1">The following command analyzes the floorplan and reports total wire length, and horizontal and vertical congestion information, in addition to the basic design information</field>
+		<field name="command_example_syntax1">analyzeFloorplan -congestion</field>
+		<field name="command_example_output1">The software generates the following report:
+			######################################################################################
+			# Generated by: Cadence Encounter 10.11-e004_1
+			# OS: Linux i686(Host ID icdlnx08s)
+			# Generated on: Mon Oct 11 15:29:06 2010
+			# Design: dtmf_chip
+			# Command: analyzeFloorplan
+			######################################################################################
+			************************* Analyze Floorplan ******************************************
+			 Die Area(um^2) : 2214144.000000
+			 Core Area(um^2) : 735512.054400
+			 Chip Density (Counting Std Cells and MACROs and IOs): 75.091%
+			 Core Density (Counting Std Cells and MACROs) : 65.841%
+			 Average utilization : 40.177%
+			 Number of instance(s) : 7761
+			 Number of Macro(s) : 40
+			 Number of IO Pin(s) : 57
+			 Number of Power Domain(s) : 1
+			************************* Estimation Results *****************************************
+			 Total Wire length. : 3.8294e+05
+			 Congestion (H). : 6.582%
+			 Congestion (V). : 8.524%
+			**************************************************************************************</field>
+		<field name="command_related_topics">" Creating An Initial Floorplan Using Automatic Floorplan Synthesis " chapter of the EDI System User Guide	Analyzing the Floorplan</field>
+	</doc>
+</add>
+
+
+<!--
+<add>
+	<doc>
+		<field name="id"></field>
+		<field name="command_name"></field>
+		<field name="command_syntax"></field>
+		<field name="command_description"></field>
+		<field name="command_description_notes_count"></field>
+		<field name="command_description_note*"></field>
+		<field name="command_parameters_count"></field>
+		<field name="command_parameter_syntax*"></field>
+		<field name="command_parameter_description*"></field>
+		<field name="command_parameters_notes_count"></field>
+		<field name="command_parameters_note*"></field>
+		<field name="command_examples_count"></field>
+		<field name="command_example_description*"></field>
+		<field name="command_example_syntax*"></field>
+		<field name="command_example_output*"></field>
+		<field name="command_related_global"></field>
+		<field name="command_related_topics"></field>
+	</doc>
+</add>
+-->
