@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/PDFtoXML/src/jce/project/noam/engineerassist/PDFExtractHandler.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="jce.project.noam.engineerassist.PDFExtractHandler"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="C:\Users\Noam\Desktop\fetxtcmdref.pdf"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="PDFtoXML"/>
+</launchConfiguration>

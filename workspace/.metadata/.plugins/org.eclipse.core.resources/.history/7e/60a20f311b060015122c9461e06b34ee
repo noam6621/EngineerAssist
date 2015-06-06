@@ -1,0 +1,347 @@
+package jce.project.noam.engineerassist;
+
+import java.io.IOException;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
+
+import jce.project.noam.engineerassist.utils.Constants;
+import jce.project.noam.engineerassist.utils.TextExtractionError;
+import jce.project.noam.engineerassist.utils.XMLWriter;
+
+/**
+ * Will control the parsing of the given text. The result will be written to an XML file 
+ * in the SOLR system format.  
+ * @author Noam S.
+ *
+ */
+public class TextParser {
+
+	private XMLWriter writer;
+	private Scanner currentText;
+	private String currentLine;
+	private int currentSection;
+
+	/**
+	 * Constructor for initializing the parsing mechanism.
+	 * 
+	 * @param path - The path to the result XML file.
+	 * @throws IOException If there was an error creating or writing to the XML file.
+	 */
+	public TextParser(String path) throws IOException {
+		writer = new XMLWriter(path);
+		writer.writeXMLStart();
+	}
+
+	/**
+	 * This will parse the given command text and write the parsed result to an XML file.
+	 * 
+	 * @param text - The text from the whole pages that the command resides in, 
+	 * including other text from other commands that are on the same pages.
+	 * @param currentTitleName - The name of the command we will be parsing, 
+	 * in order to identify the command.
+	 * @param nextTitleName - The name of the next command or title so we can recognize 
+	 * where the text ends.
+	 * @param type - The type of the command we are parsing.
+	 * @throws IOException If their was an error writing to file.
+	 * @throws TextExtractionError If the command text was not recognized.
+	 */
+	public void parseText(String text, String currentTitleName, String nextTitleName, String type) 
+			throws IOException, TextExtractionError {
+
+		writer.writeDocStart();
+		String correctedText = removeHeaderFooter(text);
+		switch (type) {
+			case Constants.COMMANDS: {
+//				writer.write(extractCommandText(correctedText, currentTitleName, nextTitleName));
+				currentText = new Scanner(extractCommandText(correctedText, currentTitleName, nextTitleName));
+				parseCommand();
+				currentText.close();
+				currentText = null;
+				break;
+			}
+			case Constants.GLOBAL_VARIABLES: {
+//				parseGlobalVariable();
+				break;
+			}
+			case Constants.DESIGN_METRICS: {
+//				parseDesignMetric();
+				break;
+			}
+			default: {
+				// Should never reach here
+			}
+		}
+		writer.writeDocEnd();
+	}
+
+	/**
+	 * This will remove any header and footer text from the text received.
+	 * 
+	 * @param text - The text which includes the header and footer.
+	 * @return A new string with the same text after removing the header and footer text.
+	 */
+	private String removeHeaderFooter(String text) {
+		String retText = text;
+		int indx = 0;
+		while ((indx = retText.indexOf("October 2014")) != -1) {
+			String tempText = retText.substring(0, indx);
+			for (int i = 0; i < 3; i++) {
+				indx = retText.indexOf("\r\n", indx + 1);
+			}
+			retText = tempText + retText.substring(indx + 2);
+		}
+
+		return retText;
+	}
+
+	/**
+	 * Extract only the text of the command, excluding all the extra text that was on the same page as the command but isn't part of it.
+	 * 
+	 * @param text - The text from the whole pages that the command resides in, including other text from other commands that are on the same pages.
+	 * @param currentTitleName - The name of the command for which we will be extracting the text, will be used to identify the commands' text start.
+	 * @param nextTitleName - The name of the next command or title so we can recognize where the command text ends.
+	 * @return The text of the command.
+	 * @throws TextExtractionError If the text was not identified.
+	 */
+	private String extractCommandText(String text, String currentTitleName, String nextTitleName) throws TextExtractionError {
+		int startIndx = text.indexOf(currentTitleName + "\r\n" + currentTitleName);
+		if (startIndx == -1) {
+			startIndx = text.indexOf(currentTitleName + "\r\n " + currentTitleName);
+			if (startIndx == -1) {
+				startIndx = text.indexOf(currentTitleName + "\r\n  " + currentTitleName);
+				if (startIndx == -1) {
+					startIndx = text.indexOf(currentTitleName + "\r\n \r\n" + currentTitleName);
+					if (startIndx == -1) {
+						startIndx = text.indexOf(currentTitleName + "\r\n  \r\n" + currentTitleName);
+						if (startIndx == -1) {
+							throw new TextExtractionError("Command not found");
+						}
+					}
+				}
+			}
+		}
+		String retText = text.substring(startIndx);
+		int endIndx = retText.indexOf(nextTitleName + "\r\n" + nextTitleName);
+		if (endIndx == -1) {
+			endIndx = retText.indexOf(nextTitleName + "\r\n " + nextTitleName);
+			if (endIndx == -1) {
+				endIndx = retText.indexOf(nextTitleName + "\r\n  " + nextTitleName);
+				if (endIndx == -1) {
+					endIndx = retText.indexOf(nextTitleName + "\r\n \r\n" + nextTitleName);
+					if (endIndx == -1) {
+						endIndx = retText.indexOf(nextTitleName + "\r\n  \r\n" + nextTitleName);
+						if (endIndx == -1) {
+							endIndx = retText.indexOf(nextTitleName + "\r\n");
+							if (endIndx == -1) {
+								throw new TextExtractionError("Command not found");
+							}
+							endIndx = retText.substring(0, endIndx).trim().lastIndexOf("\r\n");
+						}
+					}
+				}
+			}
+		}
+		retText = retText.substring(0, endIndx).trim();
+
+		return retText;
+	}
+
+	/**
+	 * Parse the command text and write the different fields to file.
+	 * @param nextField 
+	 * 
+	 * @param currentTitleName - The name of the command to parse.
+	 * @param nextTitleName - The name of the next command  or type of commands that come right after the command.
+	 * @throws IOException If there is an error writing to file.
+	 */
+	private void parseCommand() throws IOException {
+		boolean hasMore = true;
+		boolean wasSectionUpdated = true;
+		boolean isStart = true;
+		boolean isDescription = false;
+		String nextField = null;
+		String fieldStr = null;
+		currentSection = Constants.COMMAND_START_SECTION;
+		
+		while (hasMore) {
+			try {
+				currentLine = currentText.nextLine();
+			}
+			catch (NoSuchElementException e) {
+				hasMore = false;
+				continue;
+			}
+			wasSectionUpdated = updateSection();
+			switch (currentSection) {
+				case Constants.COMMAND_START_SECTION: {
+//					proccessCommandStart();
+					if (isStart) {
+						writer.writeField(Constants.COMMAND_FIELD_ID, currentLine.trim());
+						writer.writeField(Constants.COMMAND_FIELD_COMMAND_NAME, currentLine.trim());
+						isStart = false;
+						nextField = Constants.COMMAND_FIELD_COMMAND_SYNTAX;
+					}
+					else if (!isDescription) {
+						if (currentText.hasNextLine() && Character.isUpperCase((currentLine = currentText.nextLine()).charAt(0))) {
+							isDescription = true;
+							writer.writeField(Constants.COMMAND_FIELD_COMMAND_SYNTAX, fieldStr);
+							fieldStr = null;
+							nextField = Constants.COMMAND_FIELD_COMMAND_DESCRIPTION;
+							//break;/////////////////////////////////////
+						}
+						else {
+							fieldStr += currentLine;
+						}
+					}
+					if (isDescription) {
+						
+						fieldStr += currentLine;
+					}
+					break;
+				}
+				case Constants.COMMAND_PARAMETERS_SECTION: {
+					if (wasSectionUpdated) {
+						writer.writeField(nextField, fieldStr);
+						fieldStr = null;
+						nextField = Constants.COMMAND_FIELD_COMMAND_PARAMETERS;
+					}
+					fieldStr += currentLine;
+					break;
+				}
+				case Constants.COMMAND_EXAMPLES_SECTION: {
+					if (wasSectionUpdated) {
+						writer.writeField(nextField, fieldStr);
+						fieldStr = null;
+						nextField = Constants.COMMAND_FIELD_COMMAND_EXAMPLES;
+					}
+					fieldStr += currentLine;
+					break;
+				}
+				case Constants.COMMAND_RELATED_COMMANDS_SECTION: {
+					if (wasSectionUpdated) {
+						writer.writeField(nextField, fieldStr);
+						fieldStr = null;
+						nextField = Constants.COMMAND_FIELD_COMMAND_RELATED_COMMAND;
+					}
+					fieldStr += currentLine;
+					break;
+				}
+				case Constants.COMMAND_RELATED_GLOBALS_SECTION: {
+					if (wasSectionUpdated) {
+						writer.writeField(nextField, fieldStr);
+						fieldStr = null;
+						nextField = Constants.COMMAND_FIELD_COMMAND_RELATED_GLOBAL;
+					}
+					fieldStr += currentLine;
+					break;
+				}
+				case Constants.COMMAND_RELATED_TOPICS_SECTION: {
+					if (wasSectionUpdated) {
+						writer.writeField(nextField, fieldStr);
+						fieldStr = null;
+						nextField = Constants.COMMAND_FIELD_COMMAND_RELATED_TOPICS;
+					}
+					fieldStr += currentLine;
+					break;
+				}
+			}
+		}
+		writer.writeField(nextField, fieldStr);
+	}
+
+	/**
+	 * Updates the section indicator according to the current line.
+	 * 
+	 * @return true if it updated the currentSection class variable.
+	 */
+	private boolean updateSection() {
+		boolean wasUpdated = false;
+		switch (currentLine.trim()) {
+			case Constants.COMMAND_PARAMETER: {
+				currentSection = Constants.COMMAND_PARAMETERS_SECTION;
+				wasUpdated = true;
+				break;
+			}
+			case Constants.COMMAND_PARAMETERS: {
+				currentSection = Constants.COMMAND_PARAMETERS_SECTION;
+				wasUpdated = true;
+				break;
+			}
+			case Constants.COMMAND_EXAMPLE: {
+				currentSection = Constants.COMMAND_EXAMPLES_SECTION;
+				wasUpdated = true;
+				break;
+			}
+			case Constants.COMMAND_EXAMPLES: {
+				currentSection = Constants.COMMAND_EXAMPLES_SECTION;
+				wasUpdated = true;
+				break;
+			}
+			case Constants.COMMAND_RELATED_COMMAND: {
+				currentSection = Constants.COMMAND_RELATED_COMMANDS_SECTION;
+				wasUpdated = true;
+				break;
+			}
+			case Constants.COMMAND_RELATED_COMMANDS: {
+				currentSection = Constants.COMMAND_RELATED_COMMANDS_SECTION;
+				wasUpdated = true;
+				break;
+			}
+			case Constants.COMMAND_RELATED_GLOBAL: {
+				currentSection = Constants.COMMAND_RELATED_GLOBALS_SECTION;
+				wasUpdated = true;
+				break;
+			}
+			case Constants.COMMAND_RELATED_GLOBALS: {
+				currentSection = Constants.COMMAND_RELATED_GLOBALS_SECTION;
+				wasUpdated = true;
+				break;
+			}
+			case Constants.COMMAND_RELATED_TOPIC: {
+				currentSection = Constants.COMMAND_RELATED_TOPICS_SECTION;
+				wasUpdated = true;
+				break;
+			}
+			case Constants.COMMAND_RELATED_TOPICS: {
+				currentSection = Constants.COMMAND_RELATED_TOPICS_SECTION;
+				wasUpdated = true;
+				break;
+			}
+			default: {
+				wasUpdated = false;
+			}
+		}
+		
+		return wasUpdated;
+	}
+
+	/**
+	 * Parse the command start until Parameters section and writes it to file.
+	 * 
+	 * @throws IOException If there is an error writing to file.
+	 */
+	private void proccessCommandStart() throws IOException {
+		String fieldStr = null;
+		writer.writeField("id", currentLine.trim());
+		writer.writeField("command_name", currentLine.trim());
+		while (!Character.isUpperCase((currentLine = currentText.nextLine()).charAt(0))) {
+			fieldStr += currentLine;
+		}
+		writer.writeField("command_syntax", fieldStr);
+		fieldStr = currentLine;
+		while (!(currentText.hasNext(Constants.COMMAND_PARAMETER) || currentText.hasNext(Constants.COMMAND_PARAMETERS))) {
+			currentLine = currentText.nextLine();
+			fieldStr += currentLine;
+		}
+		writer.writeField("command_description", fieldStr);
+	}
+
+	/**
+	 * Write the end of the XML file.
+	 * 
+	 * @throws IOException If there is an error writing to file.
+	 */
+	public void writeXMLEnd() throws IOException {
+		writer.writeXMLEnd();
+	}
+}

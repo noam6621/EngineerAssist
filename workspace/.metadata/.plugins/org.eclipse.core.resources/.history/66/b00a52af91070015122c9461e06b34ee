@@ -1,0 +1,42 @@
+package jce.project.noam.engineerassist.utils;
+
+/**
+ * Constants for the PDFtoXML project, part of the Engineer Assist project. 
+ * 
+ * @author Noam S.
+ */
+public class Constants {
+	public static final String COMMANDS = "commands";
+	public static final String GLOBAL_VARIABLES = "global_variables";
+//	public static final String TCL_GLOBALS = "tcl_globals";
+	public static final String DESIGN_METRICS = "design_metrics";
+	
+	public static final String COMMAND_NOTES = "Notes";
+	public static final String COMMAND_NOTE = "Note";
+	public static final String COMMAND_PARAMETERS = "Parameters";
+	public static final String COMMAND_PARAMETER = "Parameter";
+	public static final String COMMAND_EXAMPLES = "Examples";
+	public static final String COMMAND_EXAMPLE = "Example";
+	public static final String COMMAND_RELATED_GLOBALS = "Related Globals";
+	public static final String COMMAND_RELATED_GLOBAL = "Related Global";
+	public static final String COMMAND_RELATED_COMMANDS = "Related Commands";
+	public static final String COMMAND_RELATED_COMMAND = "Related Command";
+	public static final String COMMAND_RELATED_TOPICS = "Related Topics";
+	public static final String COMMAND_RELATED_TOPIC = "Related Topic";
+	public static final int COMMAND_START_SECTION = 0;
+	public static final int COMMAND_PARAMETERS_SECTION = 1;
+	public static final int COMMAND_EXAMPLES_SECTION = 2;
+	public static final int COMMAND_RELATED_GLOBALS_SECTION = 3;
+	public static final int COMMAND_RELATED_COMMANDS_SECTION = 4;
+	public static final int COMMAND_RELATED_TOPICS_SECTION = 5;
+	
+	public static final String COMMAND_FIELD_ID = "id";
+	public static final String COMMAND_FIELD_COMMAND_NAME = "command_name";
+	public static final String COMMAND_FIELD_COMMAND_SYNTAX = "command_syntax";
+	public static final String COMMAND_FIELD_COMMAND_DESCRIPTION = "command_description";
+	public static final String COMMAND_FIELD_COMMAND_PARAMETERS = "command_parameters";
+	public static final String COMMAND_FIELD_COMMAND_EXAMPLES = "command_examples";
+	public static final String COMMAND_FIELD_COMMAND_RELATED_GLOBAL = "command_related_global";
+	public static final String COMMAND_FIELD_COMMAND_RELATED_COMMAND = "command_related_command";
+	public static final String COMMAND_FIELD_COMMAND_RELATED_TOPICS = "command_related_topics";
+}

@@ -110,7 +110,7 @@
       or Solr won't start. _version_ and update log are required for SolrCloud
    --> 
    <field name="_version_" type="long" indexed="true" stored="true"/>
-   
+
    <!-- points to the root document of a block of nested documents. Required for nested
       document support, may be removed otherwise
    -->
@@ -119,29 +119,26 @@
    <!-- Only remove the "id" field if you have a very good reason to. While not strictly
      required, it is highly recommended. A <uniqueKey> is present in almost all Solr 
      installations. See the <uniqueKey> declaration below where <uniqueKey> is set to "id".
-   -->   
+   -->
    <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
-   
-   <!--Fields for Encounter commands documents-->
+
+   <!--Fields for Engineer Assist project documents-->
    <field name="command_name" type="text_en_splitting" indexed="true" stored="true"/>
    <field name="command_syntax" type="string" indexed="true" stored="true"/>
    <field name="command_description" type="text_en" indexed="true" stored="true"/>
-   <field name="command_description_notes_count" type="int" indexed="true" stored="true"/>
-   <field name="command_parameters_count" type="int" indexed="true" stored="true"/>
-   <field name="command_parameters_notes_count" type="int" indexed="true" stored="true"/>
-   <field name="command_examples_count" type="int" indexed="true" stored="true"/>
-   <field name="command_related_global" type="text_en_splitting" indexed="true" stored="true"/>
-   <field name="command_related_topics" type="text_en_splitting" indexed="true" stored="true"/>
-   
-   <!--Dynamic fields for Encounter commands documents-->
-   <dynamicField name="command_description_note*" type="text_en_splitting" indexed="true"  stored="true" multiValued="true"/>
-   <dynamicField name="command_parameter_syntax*" type="string" indexed="true"  stored="true" multiValued="true"/>
-   <dynamicField name="command_parameter_description*" type="text_en_splitting" indexed="true"  stored="true" multiValued="true"/>
-   <dynamicField name="command_parameters_note*" type="text_en_splitting" indexed="true"  stored="true" multiValued="true"/>
-   <dynamicField name="command_example_description*" type="text_en_splitting" indexed="true"  stored="true" multiValued="true"/>
-   <dynamicField name="command_example_syntax*" type="string" indexed="true"  stored="true" multiValued="true"/>
-   <dynamicField name="command_example_output*" type="text_en_splitting" indexed="true"  stored="true" multiValued="true"/>
-   
+   <field name="command_parameters" type="int" indexed="true" stored="true"/>
+
+   <field name="global_variable_name" type="text_en_splitting" indexed="true" stored="true"/>
+   <field name="global_variable_syntax" type="string" indexed="true" stored="true"/>
+   <field name="global_variable_type" type="string" indexed="true" stored="true"/>
+   <field name="global_variable_default" type="string" indexed="true" stored="true"/>
+   <field name="global_variable_description" type="text_en" indexed="true" stored="true"/>
+
+   <field name="examples" type="text_en" indexed="true" stored="true"/>
+   <field name="related_global" type="text_en_splitting" indexed="true" stored="true"/>
+   <field name="related_command" type="text_en_splitting" indexed="true" stored="true"/>
+   <field name="related_topics" type="text_en_splitting" indexed="true" stored="true"/>
+
    <!--More standard fields-->
    <field name="sku" type="text_en_splitting_tight" indexed="true" stored="true" omitNorms="true"/>
    <field name="name" type="text_general" indexed="true" stored="true"/>

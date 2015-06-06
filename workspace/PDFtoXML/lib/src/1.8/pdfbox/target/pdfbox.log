@@ -1,0 +1,419 @@
+May 15, 2015 12:44:10 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+May 15, 2015 12:44:10 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+May 15, 2015 12:44:13 PM org.apache.pdfbox.pdmodel.common.PDNumberTreeNode getValue
+WARNING: NumberTreeNode does not have "nums" nor "kids" objects.
+May 15, 2015 12:44:16 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: ri
+May 15, 2015 12:44:17 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+May 15, 2015 12:44:17 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+May 15, 2015 12:44:17 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+May 15, 2015 12:44:29 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: ri
+May 15, 2015 12:44:29 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: ri
+May 15, 2015 12:44:30 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: ri
+May 15, 2015 12:44:30 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: ri
+May 15, 2015 12:44:32 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: ri
+May 15, 2015 12:44:32 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: ri
+May 15, 2015 12:44:33 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: ri
+May 15, 2015 12:44:39 PM org.apache.pdfbox.pdmodel.graphics.color.PDColorState createColor
+WARNING: Unable to create the color instance [0.0] in color space unsupported color space{  }; guessing color ... 
+Interpretating as single-integer RGB
+java.io.IOException: unsupported color space
+	at org.apache.pdfbox.pdmodel.graphics.color.PDColorStateTest$UnsupportedColorSpace.createColorSpace(PDColorStateTest.java:65)
+	at org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace.getJavaColorSpace(PDColorSpace.java:85)
+	at org.apache.pdfbox.pdmodel.graphics.color.PDColorState.createColor(PDColorState.java:191)
+	at org.apache.pdfbox.pdmodel.graphics.color.PDColorState.getJavaColor(PDColorState.java:124)
+	at org.apache.pdfbox.pdmodel.graphics.color.PDColorStateTest.testUnsupportedColorSpace(PDColorStateTest.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:232)
+	at junit.framework.TestSuite.run(TestSuite.java:227)
+	at junit.framework.TestSuite.runTest(TestSuite.java:232)
+	at junit.framework.TestSuite.run(TestSuite.java:227)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:172)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:104)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:70)
+
+May 15, 2015 12:44:39 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert 26101_Colors.ai
+May 15, 2015 12:44:39 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:44:39 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: i
+May 15, 2015 12:44:39 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:44:39 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+May 15, 2015 12:44:39 PM org.apache.pdfbox.cos.COSDocument finalize
+WARNING: Warning: You did not close a PDF Document
+May 15, 2015 12:44:40 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:44:40 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: i
+May 15, 2015 12:44:40 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:44:41 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:44:41 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: i
+May 15, 2015 12:44:41 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:44:42 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:44:42 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: i
+May 15, 2015 12:44:42 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:44:43 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:44:43 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: i
+May 15, 2015 12:44:43 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:44:43 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:44:43 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: i
+May 15, 2015 12:44:43 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:44:43 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:44:43 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: i
+May 15, 2015 12:44:43 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:44:44 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert 4PP-Highlighting.pdf
+May 15, 2015 12:44:49 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert ARCHIVERGB.ai
+May 15, 2015 12:44:53 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:44:59 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:01 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:04 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:05 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:08 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:09 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:12 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:13 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:16 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:16 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:20 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:20 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:23 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:24 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert ccitt4-cib-test.pdf
+May 15, 2015 12:45:29 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert FANTASTICCMYK.ai
+May 15, 2015 12:45:29 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:29 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:31 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:31 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:32 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:32 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:34 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:34 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:36 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:36 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:37 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:37 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:38 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:38 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:39 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert HOTRODCMYK.ai
+May 15, 2015 12:45:44 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:44 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:46 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:46 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:47 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:47 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:49 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:49 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:51 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:51 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:51 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:51 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:52 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:52 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:54 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert JBIG2Image.pdf
+May 15, 2015 12:45:54 PM com.levigo.jbig2.util.log.JDKLogger info
+INFO: Globals not set.
+May 15, 2015 12:45:54 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert jpeg_demo.pdf
+May 15, 2015 12:45:57 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert JPXTestCMYK.pdf
+May 15, 2015 12:45:58 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:45:59 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:45:59 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:00 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:00 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:00 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:01 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:01 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:02 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:02 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:02 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:03 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:03 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:03 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:04 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert JPXTestGrey.pdf
+May 15, 2015 12:46:07 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert JPXTestRGB.pdf
+May 15, 2015 12:46:07 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:08 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:08 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:08 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:09 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:09 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:09 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:10 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:10 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:10 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:11 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:11 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:11 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:11 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:12 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert png_demo.pdf
+May 15, 2015 12:46:15 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert raw_image_demo.pdf
+May 15, 2015 12:46:15 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert source.pdf
+May 15, 2015 12:46:20 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert survey.pdf
+May 15, 2015 12:46:20 PM org.apache.pdfbox.pdmodel.font.PDTrueTypeFont getawtFont
+INFO: Using font SansSerif.plain instead
+May 15, 2015 12:46:20 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: i
+May 15, 2015 12:46:21 PM org.apache.pdfbox.pdmodel.font.PDTrueTypeFont getawtFont
+INFO: Using font SansSerif.plain instead
+May 15, 2015 12:46:22 PM org.apache.pdfbox.pdfviewer.PageDrawer fillPath
+INFO: ColorSpace Pattern doesn't provide a non-stroking color, using white instead!
+May 15, 2015 12:46:23 PM org.apache.pdfbox.pdmodel.font.PDTrueTypeFont getawtFont
+INFO: Using font SansSerif.plain instead
+May 15, 2015 12:46:23 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: i
+May 15, 2015 12:46:23 PM org.apache.pdfbox.pdmodel.font.PDTrueTypeFont getawtFont
+INFO: Using font SansSerif.plain instead
+May 15, 2015 12:46:24 PM org.apache.pdfbox.pdfviewer.PageDrawer fillPath
+INFO: ColorSpace Pattern doesn't provide a non-stroking color, using white instead!
+May 15, 2015 12:46:24 PM org.apache.pdfbox.pdmodel.font.PDTrueTypeFont getawtFont
+INFO: Using font SansSerif.plain instead
+May 15, 2015 12:46:24 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: i
+May 15, 2015 12:46:24 PM org.apache.pdfbox.pdmodel.font.PDTrueTypeFont getawtFont
+INFO: Using font SansSerif.plain instead
+May 15, 2015 12:46:25 PM org.apache.pdfbox.pdfviewer.PageDrawer fillPath
+INFO: ColorSpace Pattern doesn't provide a non-stroking color, using white instead!
+May 15, 2015 12:46:25 PM org.apache.pdfbox.pdmodel.font.PDTrueTypeFont getawtFont
+INFO: Using font SansSerif.plain instead
+May 15, 2015 12:46:25 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: i
+May 15, 2015 12:46:26 PM org.apache.pdfbox.pdmodel.font.PDTrueTypeFont getawtFont
+INFO: Using font SansSerif.plain instead
+May 15, 2015 12:46:26 PM org.apache.pdfbox.pdfviewer.PageDrawer fillPath
+INFO: ColorSpace Pattern doesn't provide a non-stroking color, using white instead!
+May 15, 2015 12:46:27 PM org.apache.pdfbox.pdmodel.font.PDTrueTypeFont getawtFont
+INFO: Using font SansSerif.plain instead
+May 15, 2015 12:46:27 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: i
+May 15, 2015 12:46:27 PM org.apache.pdfbox.pdmodel.font.PDTrueTypeFont getawtFont
+INFO: Using font SansSerif.plain instead
+May 15, 2015 12:46:29 PM org.apache.pdfbox.pdfviewer.PageDrawer fillPath
+INFO: ColorSpace Pattern doesn't provide a non-stroking color, using white instead!
+May 15, 2015 12:46:29 PM org.apache.pdfbox.pdmodel.font.PDTrueTypeFont getawtFont
+INFO: Using font SansSerif.plain instead
+May 15, 2015 12:46:29 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: i
+May 15, 2015 12:46:29 PM org.apache.pdfbox.pdmodel.font.PDTrueTypeFont getawtFont
+INFO: Using font SansSerif.plain instead
+May 15, 2015 12:46:30 PM org.apache.pdfbox.pdfviewer.PageDrawer fillPath
+INFO: ColorSpace Pattern doesn't provide a non-stroking color, using white instead!
+May 15, 2015 12:46:30 PM org.apache.pdfbox.pdmodel.font.PDTrueTypeFont getawtFont
+INFO: Using font SansSerif.plain instead
+May 15, 2015 12:46:30 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: i
+May 15, 2015 12:46:30 PM org.apache.pdfbox.pdmodel.font.PDTrueTypeFont getawtFont
+INFO: Using font SansSerif.plain instead
+May 15, 2015 12:46:31 PM org.apache.pdfbox.pdfviewer.PageDrawer fillPath
+INFO: ColorSpace Pattern doesn't provide a non-stroking color, using white instead!
+May 15, 2015 12:46:32 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert test-landscape2.pdf
+May 15, 2015 12:46:32 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:32 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:33 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:33 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:33 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:33 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:34 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:34 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:35 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:35 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:35 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:35 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:35 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: BDC
+May 15, 2015 12:46:35 PM org.apache.pdfbox.util.PDFStreamEngine processOperator
+INFO: unsupported/disabled operation: EMC
+May 15, 2015 12:46:36 PM org.apache.pdfbox.util.TestImageIOUtils doTestFile
+INFO: Preparing to convert tiger-as-form-xobject.pdf
+May 15, 2015 12:46:41 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse allah2.pdf for standard test
+May 15, 2015 12:46:41 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse allah2.pdf for sorted test
+May 15, 2015 12:46:41 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse cweb.pdf for standard test
+May 15, 2015 12:46:42 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse cweb.pdf for sorted test
+May 15, 2015 12:46:59 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse data-000001.pdf for standard test
+May 15, 2015 12:46:59 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse data-000001.pdf for sorted test
+May 15, 2015 12:46:59 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse FC60_Times.pdf for standard test
+May 15, 2015 12:46:59 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse FC60_Times.pdf for sorted test
+May 15, 2015 12:46:59 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse hello3.pdf for standard test
+May 15, 2015 12:46:59 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse hello3.pdf for sorted test
+May 15, 2015 12:46:59 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse Liste732004001452_001_0.pdf_0_.pdf for standard test
+May 15, 2015 12:47:00 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse Liste732004001452_001_0.pdf_0_.pdf for sorted test
+May 15, 2015 12:47:00 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse openoffice-test-document.pdf for standard test
+May 15, 2015 12:47:00 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse openoffice-test-document.pdf for sorted test
+May 15, 2015 12:47:00 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse rotation.pdf for standard test
+May 15, 2015 12:47:00 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse rotation.pdf for sorted test
+May 15, 2015 12:47:00 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse sampleForSpec.pdf for standard test
+May 15, 2015 12:47:00 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse sampleForSpec.pdf for sorted test
+May 15, 2015 12:47:00 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse sample_fonts_solidconvertor.pdf for standard test
+May 15, 2015 12:47:00 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse sample_fonts_solidconvertor.pdf for sorted test
+May 15, 2015 12:47:00 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse simple-openoffice.pdf for standard test
+May 15, 2015 12:47:00 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse simple-openoffice.pdf for sorted test
+May 15, 2015 12:47:00 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse yaddatest.pdf for standard test
+May 15, 2015 12:47:00 PM org.apache.pdfbox.util.TestTextStripper doTestFile
+INFO: Preparing to parse yaddatest.pdf for sorted test

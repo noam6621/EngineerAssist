@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.StringWriter"/>
+<fullyQualifiedTypeName name="org.apache.pdfbox.util.PDFTextStripper"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="org.apache.pdfbox.util.PDFTextStripperByArea"/>
+<fullyQualifiedTypeName name="jce.project.noam.engineerassist.utils.PDFTextStripperExt"/>
+<fullyQualifiedTypeName name="org.apache.pdfbox.pdmodel.encryption.StandardDecryptionMaterial"/>
+<fullyQualifiedTypeName name="org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDOutlineItem"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.Character"/>
+<fullyQualifiedTypeName name="javax.swing.text.StyledEditorKit.ItalicAction"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="jce.project.noam.engineerassist.utils.Constants"/>
+<fullyQualifiedTypeName name="jce.project.noam.engineerassist.utils.TextExtractionError"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+</qualifiedTypeNameHistroy>

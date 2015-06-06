@@ -1,0 +1,7 @@
+1430846146588	Rename method 'writeXMLOpening'
+1430859937015	Rename local variable 'firstChildTitleName'
+1430859955079	Rename local variable 'secondChildTitleName'
+1431076796781	Rename local variable 'topItem'
+1431076812272	Rename local variable 'topTitleName'
+1431098603550	Rename local variable 'wereChildrenParsed'
+1431098613881	Rename local variable 'ChildrenWereParsed'

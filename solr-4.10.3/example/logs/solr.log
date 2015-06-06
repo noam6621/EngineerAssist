@@ -5550,3 +5550,267 @@ INFO  - 2015-02-01 12:46:59.738; org.apache.solr.core.CachingDirectoryFactory; C
 INFO  - 2015-02-01 12:46:59.739; org.apache.solr.core.CachingDirectoryFactory; looking to close C:\Users\Noam\Dropbox\Documents\JCE\Solr\solr-4.10.3\example\SearchEncounterIDECommands\collection1\data [CachedDir<<refCount=0;path=C:\Users\Noam\Dropbox\Documents\JCE\Solr\solr-4.10.3\example\SearchEncounterIDECommands\collection1\data;done=false>>]
 INFO  - 2015-02-01 12:46:59.740; org.apache.solr.core.CachingDirectoryFactory; Closing directory: C:\Users\Noam\Dropbox\Documents\JCE\Solr\solr-4.10.3\example\SearchEncounterIDECommands\collection1\data
 INFO  - 2015-02-01 12:46:59.745; org.eclipse.jetty.server.handler.ContextHandler; stopped o.e.j.w.WebAppContext{/solr,file:/C:/Users/Noam/Dropbox/Documents/JCE/Solr/solr-4.10.3/example/solr-webapp/webapp/},C:\Users\Noam\Dropbox\Documents\JCE\Solr\solr-4.10.3\example/webapps/solr.war
+INFO  - 2015-02-01 18:06:35.018; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2015-02-01 18:06:35.051; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\contexts at interval 0
+INFO  - 2015-02-01 18:06:35.099; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\contexts\solr-jetty-context.xml
+INFO  - 2015-02-01 18:06:36.724; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2015-02-01 18:06:36.862; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()
+INFO  - 2015-02-01 18:06:36.915; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2015-02-01 18:06:36.916; org.apache.solr.core.SolrResourceLoader; using system property solr.solr.home: SearchEncounterIDECommands
+INFO  - 2015-02-01 18:06:36.925; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'SearchEncounterIDECommands\'
+INFO  - 2015-02-01 18:06:37.258; org.apache.solr.core.ConfigSolr; Loading container configuration from C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\solr.xml
+INFO  - 2015-02-01 18:06:37.623; org.apache.solr.core.CorePropertiesLocator; Config-defined core root directory: C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands
+INFO  - 2015-02-01 18:06:37.694; org.apache.solr.core.CoreContainer; New CoreContainer 1030684756
+INFO  - 2015-02-01 18:06:37.695; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=SearchEncounterIDECommands\]
+INFO  - 2015-02-01 18:06:37.725; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 0
+INFO  - 2015-02-01 18:06:37.726; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: null
+INFO  - 2015-02-01 18:06:37.733; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 0
+INFO  - 2015-02-01 18:06:37.734; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2015-02-01 18:06:37.737; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2015-02-01 18:06:37.738; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2015-02-01 18:06:37.739; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2015-02-01 18:06:37.739; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2015-02-01 18:06:37.740; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2015-02-01 18:06:39.022; org.apache.solr.update.UpdateShardHandler; Creating UpdateShardHandler HTTP client with params: socketTimeout=0&connTimeout=0&retry=false
+INFO  - 2015-02-01 18:06:39.025; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2015-02-01 18:06:39.026; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2015-02-01 18:06:39.027; org.apache.solr.core.CoreContainer; Host Name: 
+INFO  - 2015-02-01 18:06:48.129; org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands
+INFO  - 2015-02-01 18:06:48.174; org.apache.solr.core.CorePropertiesLocator; Found core collection1 in C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\
+INFO  - 2015-02-01 18:06:48.176; org.apache.solr.core.CorePropertiesLocator; Found 1 core definitions
+INFO  - 2015-02-01 18:06:48.189; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\'
+INFO  - 2015-02-01 18:06:48.343; org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+INFO  - 2015-02-01 18:06:48.347; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/apache-mime4j-core-0.7.2.jar' to classloader
+INFO  - 2015-02-01 18:06:48.348; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/apache-mime4j-dom-0.7.2.jar' to classloader
+INFO  - 2015-02-01 18:06:48.349; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/aspectjrt-1.6.11.jar' to classloader
+INFO  - 2015-02-01 18:06:48.350; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/bcmail-jdk15-1.45.jar' to classloader
+INFO  - 2015-02-01 18:06:48.351; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/bcprov-jdk15-1.45.jar' to classloader
+INFO  - 2015-02-01 18:06:48.352; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/boilerpipe-1.1.0.jar' to classloader
+INFO  - 2015-02-01 18:06:48.354; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/commons-compress-1.7.jar' to classloader
+INFO  - 2015-02-01 18:06:48.355; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/dom4j-1.6.1.jar' to classloader
+INFO  - 2015-02-01 18:06:48.356; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/fontbox-1.8.4.jar' to classloader
+INFO  - 2015-02-01 18:06:48.357; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/icu4j-53.1.jar' to classloader
+INFO  - 2015-02-01 18:06:48.358; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/isoparser-1.0-RC-1.jar' to classloader
+INFO  - 2015-02-01 18:06:48.360; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/jdom-1.0.jar' to classloader
+INFO  - 2015-02-01 18:06:48.361; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/jempbox-1.8.4.jar' to classloader
+INFO  - 2015-02-01 18:06:48.363; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/jhighlight-1.0.jar' to classloader
+INFO  - 2015-02-01 18:06:48.364; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/juniversalchardet-1.0.3.jar' to classloader
+INFO  - 2015-02-01 18:06:48.365; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/metadata-extractor-2.6.2.jar' to classloader
+INFO  - 2015-02-01 18:06:48.366; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/pdfbox-1.8.4.jar' to classloader
+INFO  - 2015-02-01 18:06:48.368; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/poi-3.10.1.jar' to classloader
+INFO  - 2015-02-01 18:06:48.369; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/poi-ooxml-3.10.1.jar' to classloader
+INFO  - 2015-02-01 18:06:48.370; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/poi-ooxml-schemas-3.10.1.jar' to classloader
+INFO  - 2015-02-01 18:06:48.371; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/poi-scratchpad-3.10.1.jar' to classloader
+INFO  - 2015-02-01 18:06:48.372; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/rome-0.9.jar' to classloader
+INFO  - 2015-02-01 18:06:48.373; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/tagsoup-1.2.1.jar' to classloader
+INFO  - 2015-02-01 18:06:48.375; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/tika-core-1.5.jar' to classloader
+INFO  - 2015-02-01 18:06:48.376; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/tika-parsers-1.5.jar' to classloader
+INFO  - 2015-02-01 18:06:48.377; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/tika-xmp-1.5.jar' to classloader
+INFO  - 2015-02-01 18:06:48.379; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/vorbis-java-core-0.1.jar' to classloader
+INFO  - 2015-02-01 18:06:48.380; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/vorbis-java-tika-0.1.jar' to classloader
+INFO  - 2015-02-01 18:06:48.381; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/xercesImpl-2.9.1.jar' to classloader
+INFO  - 2015-02-01 18:06:48.382; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/xmlbeans-2.6.0.jar' to classloader
+INFO  - 2015-02-01 18:06:48.384; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/xmpcore-5.1.2.jar' to classloader
+INFO  - 2015-02-01 18:06:48.385; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/extraction/lib/xz-1.4.jar' to classloader
+INFO  - 2015-02-01 18:06:48.389; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/dist/solr-cell-4.10.3.jar' to classloader
+INFO  - 2015-02-01 18:06:48.391; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/clustering/lib/attributes-binder-1.2.1.jar' to classloader
+INFO  - 2015-02-01 18:06:48.392; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/clustering/lib/carrot2-mini-3.9.0.jar' to classloader
+INFO  - 2015-02-01 18:06:48.393; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/clustering/lib/hppc-0.5.2.jar' to classloader
+INFO  - 2015-02-01 18:06:48.394; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/clustering/lib/jackson-core-asl-1.9.13.jar' to classloader
+INFO  - 2015-02-01 18:06:48.395; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/clustering/lib/jackson-mapper-asl-1.9.13.jar' to classloader
+INFO  - 2015-02-01 18:06:48.396; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/clustering/lib/mahout-collections-1.0.jar' to classloader
+INFO  - 2015-02-01 18:06:48.398; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/clustering/lib/mahout-math-0.6.jar' to classloader
+INFO  - 2015-02-01 18:06:48.399; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/clustering/lib/simple-xml-2.7.jar' to classloader
+INFO  - 2015-02-01 18:06:48.401; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/dist/solr-clustering-4.10.3.jar' to classloader
+INFO  - 2015-02-01 18:06:48.403; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/langid/lib/jsonic-1.2.7.jar' to classloader
+INFO  - 2015-02-01 18:06:48.404; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/langid/lib/langdetect-1.1-20120112.jar' to classloader
+INFO  - 2015-02-01 18:06:48.406; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/dist/solr-langid-4.10.3.jar' to classloader
+INFO  - 2015-02-01 18:06:48.408; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/velocity/lib/commons-beanutils-1.8.3.jar' to classloader
+INFO  - 2015-02-01 18:06:48.409; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/velocity/lib/commons-collections-3.2.1.jar' to classloader
+INFO  - 2015-02-01 18:06:48.410; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/velocity/lib/velocity-1.7.jar' to classloader
+INFO  - 2015-02-01 18:06:48.411; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/contrib/velocity/lib/velocity-tools-2.0.jar' to classloader
+INFO  - 2015-02-01 18:06:48.414; org.apache.solr.core.SolrResourceLoader; Adding 'file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/dist/solr-velocity-4.10.3.jar' to classloader
+INFO  - 2015-02-01 18:06:48.532; org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2015-02-01 18:06:48.558; org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: 4.10.3
+INFO  - 2015-02-01 18:06:48.848; org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2015-02-01 18:06:48.865; org.apache.solr.schema.IndexSchema; Reading Solr Schema from C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\conf\schema.xml
+INFO  - 2015-02-01 18:06:48.957; org.apache.solr.schema.IndexSchema; [collection1] Schema name=example
+INFO  - 2015-02-01 18:06:49.711; org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2015-02-01 18:06:49.730; org.apache.solr.rest.RestManager$Registry; Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+INFO  - 2015-02-01 18:06:49.732; org.apache.solr.rest.RestManager$Registry; Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+INFO  - 2015-02-01 18:06:49.840; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2015-02-01 18:06:49.847; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2015-02-01 18:06:50.000; org.apache.solr.core.CoreContainer; Creating SolrCore 'collection1' using configuration from instancedir C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\
+INFO  - 2015-02-01 18:06:50.052; org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2015-02-01 18:06:50.070; org.apache.solr.core.SolrCore; [collection1] Opening new SolrCore at C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\, dataDir=C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\data\
+INFO  - 2015-02-01 18:06:50.080; org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2015-02-01 18:06:50.108; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2015-02-01 18:06:50.110; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2015-02-01 18:06:50.260; org.apache.solr.core.CachingDirectoryFactory; return new directory for C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\data
+INFO  - 2015-02-01 18:06:50.313; org.apache.solr.core.SolrCore; New index directory detected: old=null new=C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\data\index/
+INFO  - 2015-02-01 18:06:50.316; org.apache.solr.core.CachingDirectoryFactory; return new directory for C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\data\index
+INFO  - 2015-02-01 18:06:50.356; org.apache.solr.core.SolrCore; created json: solr.JSONResponseWriter
+INFO  - 2015-02-01 18:06:50.357; org.apache.solr.core.SolrCore; adding lazy queryResponseWriter: solr.VelocityResponseWriter
+INFO  - 2015-02-01 18:06:50.358; org.apache.solr.core.SolrCore; created velocity: solr.VelocityResponseWriter
+INFO  - 2015-02-01 18:06:50.364; org.apache.solr.core.SolrCore; created xslt: solr.XSLTResponseWriter
+INFO  - 2015-02-01 18:06:50.365; org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2015-02-01 18:06:50.474; org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2015-02-01 18:06:50.490; org.apache.solr.core.RequestHandlers; created /update: org.apache.solr.handler.UpdateRequestHandler
+INFO  - 2015-02-01 18:06:50.491; org.apache.solr.core.RequestHandlers; created /update/json: org.apache.solr.handler.UpdateRequestHandler
+INFO  - 2015-02-01 18:06:50.491; org.apache.solr.core.RequestHandlers; created /update/csv: org.apache.solr.handler.UpdateRequestHandler
+INFO  - 2015-02-01 18:06:50.493; org.apache.solr.core.RequestHandlers; created /update/json/docs: org.apache.solr.handler.UpdateRequestHandler
+INFO  - 2015-02-01 18:06:50.502; org.apache.solr.core.RequestHandlers; created /select: solr.SearchHandler
+INFO  - 2015-02-01 18:06:50.502; org.apache.solr.core.RequestHandlers; created /query: solr.SearchHandler
+INFO  - 2015-02-01 18:06:50.507; org.apache.solr.core.RequestHandlers; created /get: solr.RealTimeGetHandler
+INFO  - 2015-02-01 18:06:50.508; org.apache.solr.core.RequestHandlers; created /export: solr.SearchHandler
+INFO  - 2015-02-01 18:06:50.509; org.apache.solr.core.RequestHandlers; created /browse: solr.SearchHandler
+WARN  - 2015-02-01 18:06:50.513; org.apache.solr.core.RequestHandlers; Multiple requestHandler registered to the same name: /update ignoring: org.apache.solr.handler.UpdateRequestHandler
+INFO  - 2015-02-01 18:06:50.515; org.apache.solr.core.RequestHandlers; created /update: solr.UpdateRequestHandler
+INFO  - 2015-02-01 18:06:50.515; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+INFO  - 2015-02-01 18:06:50.517; org.apache.solr.core.RequestHandlers; created /update/extract: solr.extraction.ExtractingRequestHandler
+INFO  - 2015-02-01 18:06:50.517; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+INFO  - 2015-02-01 18:06:50.518; org.apache.solr.core.RequestHandlers; created /analysis/field: solr.FieldAnalysisRequestHandler
+INFO  - 2015-02-01 18:06:50.518; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+INFO  - 2015-02-01 18:06:50.519; org.apache.solr.core.RequestHandlers; created /analysis/document: solr.DocumentAnalysisRequestHandler
+INFO  - 2015-02-01 18:06:50.522; org.apache.solr.core.RequestHandlers; created /admin/: solr.admin.AdminHandlers
+INFO  - 2015-02-01 18:06:50.527; org.apache.solr.core.RequestHandlers; created /admin/ping: solr.PingRequestHandler
+INFO  - 2015-02-01 18:06:50.531; org.apache.solr.core.RequestHandlers; created /debug/dump: solr.DumpRequestHandler
+INFO  - 2015-02-01 18:06:50.546; org.apache.solr.core.RequestHandlers; created /replication: solr.ReplicationHandler
+INFO  - 2015-02-01 18:06:50.547; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2015-02-01 18:06:50.547; org.apache.solr.core.RequestHandlers; created /spell: solr.SearchHandler
+INFO  - 2015-02-01 18:06:50.548; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2015-02-01 18:06:50.548; org.apache.solr.core.RequestHandlers; created /tvrh: solr.SearchHandler
+INFO  - 2015-02-01 18:06:50.549; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2015-02-01 18:06:50.549; org.apache.solr.core.RequestHandlers; created /terms: solr.SearchHandler
+INFO  - 2015-02-01 18:06:50.550; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2015-02-01 18:06:50.550; org.apache.solr.core.RequestHandlers; created /elevate: solr.SearchHandler
+INFO  - 2015-02-01 18:06:50.580; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-02-01 18:06:50.583; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-02-01 18:06:50.584; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-02-01 18:06:50.585; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-02-01 18:06:50.586; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-02-01 18:06:50.641; org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2015-02-01 18:06:50.642; org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2015-02-01 18:06:50.738; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\data\index lockFactory=NativeFSLockFactory@C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\data\index; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_4,generation=4}
+INFO  - 2015-02-01 18:06:50.740; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 4
+INFO  - 2015-02-01 18:06:50.819; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@316e1f80[collection1] main
+INFO  - 2015-02-01 18:06:50.832; org.apache.solr.rest.ManagedResourceStorage$FileStorageIO; File-based storage initialized to use dir: C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\conf
+INFO  - 2015-02-01 18:06:50.832; org.apache.solr.rest.RestManager; Initializing RestManager with initArgs: {storageDir=C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\conf}
+INFO  - 2015-02-01 18:06:50.835; org.apache.solr.rest.ManagedResourceStorage; Reading _rest_managed.json using file:dir=C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\conf
+INFO  - 2015-02-01 18:06:50.864; org.apache.solr.rest.ManagedResourceStorage; Loaded LinkedHashMap at path _rest_managed.json using file:dir=C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\conf
+INFO  - 2015-02-01 18:06:50.865; org.apache.solr.rest.ManagedResource; Loaded initArgs {} for /rest/managed
+INFO  - 2015-02-01 18:06:50.866; org.apache.solr.rest.RestManager; Initializing 2 registered ManagedResources
+INFO  - 2015-02-01 18:06:50.867; org.apache.solr.rest.ManagedResourceStorage; Reading _schema_analysis_stopwords_english.json using file:dir=C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\conf
+INFO  - 2015-02-01 18:06:50.870; org.apache.solr.rest.ManagedResourceStorage; Loaded LinkedHashMap at path _schema_analysis_stopwords_english.json using file:dir=C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\conf
+INFO  - 2015-02-01 18:06:50.872; org.apache.solr.rest.ManagedResource; Loaded initArgs {ignoreCase=true} for /schema/analysis/stopwords/english
+INFO  - 2015-02-01 18:06:50.873; org.apache.solr.rest.schema.analysis.ManagedWordSetResource; Loaded 35 words for /schema/analysis/stopwords/english
+INFO  - 2015-02-01 18:06:50.873; org.apache.solr.rest.ManagedResource; Notified 1 observers of /schema/analysis/stopwords/english
+INFO  - 2015-02-01 18:06:50.874; org.apache.solr.rest.ManagedResourceStorage; Reading _schema_analysis_synonyms_english.json using file:dir=C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\conf
+INFO  - 2015-02-01 18:06:50.876; org.apache.solr.rest.ManagedResourceStorage; Loaded LinkedHashMap at path _schema_analysis_synonyms_english.json using file:dir=C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\conf
+INFO  - 2015-02-01 18:06:50.877; org.apache.solr.rest.ManagedResource; Loaded initArgs {ignoreCase=true,format=solr} for /schema/analysis/synonyms/english
+INFO  - 2015-02-01 18:06:50.880; org.apache.solr.rest.schema.analysis.ManagedSynonymFilterFactory$SynonymManager; Loaded 3 synonym mappings for /schema/analysis/synonyms/english
+INFO  - 2015-02-01 18:06:50.885; org.apache.solr.rest.ManagedResource; Notified 1 observers of /schema/analysis/synonyms/english
+INFO  - 2015-02-01 18:06:50.886; org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2015-02-01 18:06:50.902; org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2015-02-01 18:06:50.920; org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2015-02-01 18:06:50.926; org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\conf\elevate.xml
+INFO  - 2015-02-01 18:07:00.004; org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2015-02-01 18:07:00.006; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@316e1f80[collection1] main{StandardDirectoryReader(segments_4:11:nrt _2(4.10.3):C5)}
+INFO  - 2015-02-01 18:07:00.007; org.apache.solr.core.CoreContainer; registering core: collection1
+INFO  - 2015-02-01 18:07:00.014; org.apache.solr.servlet.SolrDispatchFilter; user.dir=C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example
+INFO  - 2015-02-01 18:07:00.015; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2015-02-01 18:07:00.109; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2015-02-01 18:07:00.294; org.apache.solr.core.SolrCore; [collection1] webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=282 
+INFO  - 2015-02-01 18:07:00.295; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2015-02-01 18:07:00.296; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2015-02-01 18:07:00.296; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2015-02-01 18:07:00.297; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@316e1f80[collection1] main{StandardDirectoryReader(segments_4:11:nrt _2(4.10.3):C5)}
+INFO  - 2015-02-01 18:21:17.608; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+get+rid+of+a+repeater&indent=true&wt=xml} hits=1 status=0 QTime=17 
+INFO  - 2015-02-01 18:21:17.771; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+get+rid+of+a+repeater&indent=true&wt=xml} hits=1 status=0 QTime=6 
+INFO  - 2015-02-01 18:21:19.646; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+get+rid+of+a+repeater&indent=true&wt=xml} hits=1 status=0 QTime=4 
+INFO  - 2015-02-01 18:21:58.368; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+change+the+size+of+cells&indent=true&fl=command_name,command_syntax,command_description&wt=xml} hits=1 status=0 QTime=13 
+INFO  - 2015-02-01 18:21:58.379; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+change+the+size+of+cells&indent=true&fl=command_name,command_syntax,command_description&wt=xml} hits=1 status=0 QTime=4 
+INFO  - 2015-02-01 18:21:58.643; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+change+the+size+of+cells&indent=true&fl=command_name,command_syntax,command_description&wt=xml} hits=1 status=0 QTime=4 
+INFO  - 2015-02-01 20:54:49.917; org.eclipse.jetty.server.handler.ContextHandler$Context; No JSP support.  Check that JSP jars are in lib/jsp and that the JSP option has been specified to start.jar
+INFO  - 2015-02-01 20:54:58.214; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1422816898191} status=0 QTime=3 
+INFO  - 2015-02-01 20:54:58.414; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={wt=json&_=1422816898305} status=0 QTime=94 
+INFO  - 2015-02-01 20:55:04.043; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-bottom.html&contentType=text/html;charset%3Dutf-8&_=1422816903975} status=0 QTime=3 
+INFO  - 2015-02-01 20:55:04.044; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-top.html&contentType=text/html;charset%3Dutf-8&_=1422816903969} status=0 QTime=3 
+INFO  - 2015-02-01 20:55:04.127; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.html&_=1422816904081} status=0 QTime=1 
+INFO  - 2015-02-01 20:55:04.129; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={action=status&wt=json&_=1422816904083} status=503 QTime=3 
+INFO  - 2015-02-01 20:55:04.135; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/replication params={wt=json&command=details&_=1422816904074} status=0 QTime=13 
+INFO  - 2015-02-01 20:55:04.129; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=index&numTerms=0&wt=json&_=1422816904063} status=0 QTime=7 
+INFO  - 2015-02-01 20:55:04.134; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/system params={wt=json&_=1422816904077} status=0 QTime=5 
+INFO  - 2015-02-01 20:55:05.652; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1422816905600} status=0 QTime=24 
+INFO  - 2015-02-01 20:55:49.854; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1422816949824} status=0 QTime=4 
+INFO  - 2015-02-01 20:55:50.056; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/analysis/field params={analysis.showmatch=true&wt=json&analysis.query=How+to+change+the+size+of+cells&analysis.fieldtype=text_en_splitting&_=1422816949909} status=0 QTime=126 
+INFO  - 2015-02-01 20:57:41.313; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1422817061283} status=0 QTime=7 
+INFO  - 2015-02-01 20:57:41.405; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/analysis/field params={analysis.showmatch=true&wt=json&analysis.query=How+to+change+the+size+of+cells&analysis.fieldtype=text_en&_=1422817061362} status=0 QTime=7 
+INFO  - 2015-02-01 20:58:40.904; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1422817120860} status=0 QTime=12 
+INFO  - 2015-02-01 20:58:41.016; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/analysis/field params={analysis.fieldvalue=ecoChangeCell&analysis.showmatch=true&wt=json&analysis.query=How+to+change+the+size+of+cells&analysis.fieldtype=text_en&_=1422817120977} status=0 QTime=7 
+INFO  - 2015-02-01 20:59:31.316; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1422817171287} status=0 QTime=3 
+INFO  - 2015-02-01 20:59:31.390; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/analysis/field params={analysis.fieldvalue=ecoChangeCell&analysis.showmatch=true&wt=json&analysis.query=How+to+change+the+size+of+cells&analysis.fieldtype=text_en_splitting&_=1422817171361} status=0 QTime=5 
+INFO  - 2015-02-01 21:13:27.249; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1422818007215} status=0 QTime=0 
+INFO  - 2015-02-01 21:13:27.309; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={wt=json&_=1422818007290} status=0 QTime=1 
+INFO  - 2015-02-01 21:13:29.878; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-top.html&contentType=text/html;charset%3Dutf-8&_=1422818009847} status=0 QTime=3 
+INFO  - 2015-02-01 21:13:29.878; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-bottom.html&contentType=text/html;charset%3Dutf-8&_=1422818009850} status=0 QTime=1 
+INFO  - 2015-02-01 21:13:29.933; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=index&numTerms=0&wt=json&_=1422818009894} status=0 QTime=1 
+INFO  - 2015-02-01 21:13:29.939; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.html&_=1422818009910} status=0 QTime=1 
+INFO  - 2015-02-01 21:13:29.938; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={action=status&wt=json&_=1422818009913} status=503 QTime=0 
+INFO  - 2015-02-01 21:13:29.948; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/system params={wt=json&_=1422818009907} status=0 QTime=11 
+INFO  - 2015-02-01 21:13:29.955; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/replication params={wt=json&command=details&_=1422818009904} status=0 QTime=23 
+INFO  - 2015-02-01 21:13:30.502; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1422818010478} status=0 QTime=3 
+INFO  - 2015-02-01 21:13:47.190; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1422818027165} status=0 QTime=2 
+INFO  - 2015-02-01 21:13:47.255; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/analysis/field params={analysis.showmatch=true&wt=json&analysis.query=How+to+change+the+size+of+cells&analysis.fieldtype=text_en_splitting&_=1422818027229} status=0 QTime=3 
+INFO  - 2015-02-01 22:27:34.305; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+get+rid+of+a+repeater&indent=true&wt=xml} hits=1 status=0 QTime=4 
+INFO  - 2015-02-01 22:27:34.320; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+get+rid+of+a+repeater&indent=true&wt=xml} hits=1 status=0 QTime=3 
+INFO  - 2015-02-01 22:27:34.648; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+get+rid+of+a+repeater&indent=true&wt=xml} hits=1 status=0 QTime=5 
+INFO  - 2015-02-01 22:28:06.001; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+get+rid+of+a+repeater&indent=true&wt=xml} hits=1 status=0 QTime=3 
+INFO  - 2015-02-01 22:28:06.010; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+get+rid+of+a+repeater&indent=true&wt=xml} hits=1 status=0 QTime=3 
+INFO  - 2015-02-01 22:28:06.255; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+get+rid+of+a+repeater&indent=true&wt=xml} hits=1 status=0 QTime=4 
+INFO  - 2015-02-01 22:28:52.378; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+change+the+size+of+cells&indent=true&fl=command_name,command_syntax,command_description&wt=xml} hits=1 status=0 QTime=3 
+INFO  - 2015-02-01 22:28:52.387; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+change+the+size+of+cells&indent=true&fl=command_name,command_syntax,command_description&wt=xml} hits=1 status=0 QTime=2 
+INFO  - 2015-02-01 22:28:52.614; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+change+the+size+of+cells&indent=true&fl=command_name,command_syntax,command_description&wt=xml} hits=1 status=0 QTime=3 
+INFO  - 2015-02-01 22:29:01.868; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+change+the+size+of+cells&indent=true&fl=command_name,command_syntax,command_description&wt=xml} hits=1 status=0 QTime=3 
+INFO  - 2015-02-01 22:29:01.876; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+change+the+size+of+cells&indent=true&fl=command_name,command_syntax,command_description&wt=xml} hits=1 status=0 QTime=3 
+INFO  - 2015-02-01 22:29:02.128; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+change+the+size+of+cells&indent=true&fl=command_name,command_syntax,command_description&wt=xml} hits=1 status=0 QTime=4 
+INFO  - 2015-02-01 22:41:41.920; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1422823301901} status=0 QTime=1 
+INFO  - 2015-02-01 22:41:41.994; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={wt=json&_=1422823301976} status=0 QTime=1 
+INFO  - 2015-02-01 22:41:47.003; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-bottom.html&contentType=text/html;charset%3Dutf-8&_=1422823306957} status=0 QTime=2 
+INFO  - 2015-02-01 22:41:47.003; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-top.html&contentType=text/html;charset%3Dutf-8&_=1422823306953} status=0 QTime=2 
+INFO  - 2015-02-01 22:41:47.066; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=index&numTerms=0&wt=json&_=1422823307021} status=0 QTime=1 
+INFO  - 2015-02-01 22:41:47.090; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.html&_=1422823307040} status=0 QTime=1 
+INFO  - 2015-02-01 22:41:47.094; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/replication params={wt=json&command=details&_=1422823307032} status=0 QTime=6 
+INFO  - 2015-02-01 22:41:47.093; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/system params={wt=json&_=1422823307037} status=0 QTime=5 
+INFO  - 2015-02-01 22:41:47.092; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={action=status&wt=json&_=1422823307044} status=503 QTime=1 
+INFO  - 2015-02-01 22:41:49.733; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1422823309708} status=0 QTime=2 
+INFO  - 2015-02-01 22:42:00.328; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1422823320303} status=0 QTime=1 
+INFO  - 2015-02-01 22:42:00.429; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/analysis/field params={analysis.showmatch=true&wt=json&analysis.query=How+to+change+the+size+of+cells&analysis.fieldtype=text_en_splitting&_=1422823320387} status=0 QTime=3 
+INFO  - 2015-02-01 22:59:03.397; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+get+rid+of+a+repeater&indent=true&wt=xml} hits=1 status=0 QTime=3 
+INFO  - 2015-02-01 22:59:03.408; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+get+rid+of+a+repeater&indent=true&wt=xml} hits=1 status=0 QTime=2 
+INFO  - 2015-02-01 22:59:03.684; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+get+rid+of+a+repeater&indent=true&wt=xml} hits=1 status=0 QTime=2 
+INFO  - 2015-02-01 22:59:56.070; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+change+the+size+of+cells&indent=true&fl=command_name,command_syntax,command_description&wt=xml} hits=1 status=0 QTime=3 
+INFO  - 2015-02-01 22:59:56.082; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+change+the+size+of+cells&indent=true&fl=command_name,command_syntax,command_description&wt=xml} hits=1 status=0 QTime=3 
+INFO  - 2015-02-01 22:59:56.370; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+change+the+size+of+cells&indent=true&fl=command_name,command_syntax,command_description&wt=xml} hits=1 status=0 QTime=2 
+INFO  - 2015-02-02 09:39:34.834; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+get+rid+of+a+repeater&indent=true&wt=xml} hits=1 status=0 QTime=3 
+INFO  - 2015-02-02 09:39:34.880; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+get+rid+of+a+repeater&indent=true&wt=xml} hits=1 status=0 QTime=2 
+INFO  - 2015-02-02 09:39:35.237; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+get+rid+of+a+repeater&indent=true&wt=xml} hits=1 status=0 QTime=3 
+INFO  - 2015-02-02 09:42:11.373; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+change+the+size+of+cells&indent=true&fl=command_name,command_syntax,command_description&wt=xml} hits=1 status=0 QTime=3 
+INFO  - 2015-02-02 09:42:11.384; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+change+the+size+of+cells&indent=true&fl=command_name,command_syntax,command_description&wt=xml} hits=1 status=0 QTime=3 
+INFO  - 2015-02-02 09:42:11.692; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=How+to+change+the+size+of+cells&indent=true&fl=command_name,command_syntax,command_description&wt=xml} hits=1 status=0 QTime=2 
+INFO  - 2015-02-02 18:58:05.736; org.eclipse.jetty.server.Server; Graceful shutdown SocketConnector@0.0.0.0:8983
+INFO  - 2015-02-02 18:58:05.738; org.eclipse.jetty.server.Server; Graceful shutdown o.e.j.w.WebAppContext{/solr,file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/example/solr-webapp/webapp/},C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example/webapps/solr.war
+INFO  - 2015-02-02 18:58:06.740; org.apache.solr.core.CoreContainer; Shutting down CoreContainer instance=1030684756
+INFO  - 2015-02-02 18:58:06.781; org.apache.solr.core.SolrCore; [collection1]  CLOSING SolrCore org.apache.solr.core.SolrCore@7cc7d4b2
+INFO  - 2015-02-02 18:58:06.782; org.apache.solr.update.DirectUpdateHandler2; closing DirectUpdateHandler2{commits=0,autocommit maxTime=15000ms,autocommits=0,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=0,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0,transaction_logs_total_size=87319,transaction_logs_total_number=3}
+INFO  - 2015-02-02 18:58:06.783; org.apache.solr.update.SolrCoreState; Closing SolrCoreState
+INFO  - 2015-02-02 18:58:06.784; org.apache.solr.update.DefaultSolrCoreState; SolrCoreState ref count has reached 0 - closing IndexWriter
+INFO  - 2015-02-02 18:58:06.784; org.apache.solr.update.DefaultSolrCoreState; closing IndexWriter with IndexWriterCloser
+INFO  - 2015-02-02 18:58:06.921; org.apache.solr.core.SolrCore; [collection1] Closing main searcher on request.
+INFO  - 2015-02-02 18:58:06.925; org.apache.solr.core.CachingDirectoryFactory; Closing NRTCachingDirectoryFactory - 2 directories currently being tracked
+INFO  - 2015-02-02 18:58:06.938; org.apache.solr.core.CachingDirectoryFactory; looking to close C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\data\index [CachedDir<<refCount=0;path=C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\data\index;done=false>>]
+INFO  - 2015-02-02 18:58:06.939; org.apache.solr.core.CachingDirectoryFactory; Closing directory: C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\data\index
+INFO  - 2015-02-02 18:58:06.939; org.apache.solr.core.CachingDirectoryFactory; looking to close C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\data [CachedDir<<refCount=0;path=C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\data;done=false>>]
+INFO  - 2015-02-02 18:58:06.940; org.apache.solr.core.CachingDirectoryFactory; Closing directory: C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example\SearchEncounterIDECommands\collection1\data
+INFO  - 2015-02-02 18:58:06.945; org.eclipse.jetty.server.handler.ContextHandler; stopped o.e.j.w.WebAppContext{/solr,file:/C:/Users/Noam/Documents/GitHub/EngineerAssist/solr-4.10.3/example/solr-webapp/webapp/},C:\Users\Noam\Documents\GitHub\EngineerAssist\solr-4.10.3\example/webapps/solr.war
