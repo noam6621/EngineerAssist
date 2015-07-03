@@ -1,0 +1,151 @@
+﻿@model EngineerAssistWebApp.Models.CommandModels
+
+@{
+    ViewBag.Title = "Details of '" + Model.Id + "'";
+}
+
+<h2>Details of '@Model.Id'</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        @if (Model.GlobalVariableName == null)
+        {
+            <dt>
+                Name
+            </dt>
+
+            <dd class="detail">
+                @Html.DisplayFor(model => model.CommandName)
+            </dd>
+
+            <dt>
+                Syntax
+            </dt>
+
+            <dd class="detail">
+                @Html.DisplayFor(model => model.CommandSyntax)
+            </dd>
+
+            if (Model.CommandDescription != null)
+            {
+            <dt>
+                Description
+            </dt>
+
+            <dd class="detail">
+                @Html.DisplayFor(model => model.CommandDescription)
+            </dd>
+            }
+
+            if (Model.CommandParameters != null)
+            {
+                <dt>
+                    Parameters
+                </dt>
+
+            <dd class="detail">
+                @Html.DisplayFor(model => model.CommandParameters)
+            </dd>
+            }
+        }
+        
+        @if (Model.CommandName == null)
+        {
+            <dt>
+                Name
+            </dt>
+
+            <dd class="detail">
+                @Html.DisplayFor(model => model.GlobalVariableName)
+            </dd>
+
+            <dt>
+                Syntax
+            </dt>
+
+            <dd class="detail">
+                @Html.DisplayFor(model => model.GlobalVariableSyntax)
+            </dd>
+
+            if (Model.GlobalVariableType != null)
+            {
+            <dt>
+                Type
+            </dt>
+
+            <dd class="detail">
+                @Html.DisplayFor(model => model.GlobalVariableType)
+            </dd>
+            }
+
+            if (Model.GlobalVariableDefault != null)
+            {
+            <dt>
+                Default
+            </dt>
+
+            <dd class="detail">
+                @Html.DisplayFor(model => model.GlobalVariableDefault)
+            </dd>
+            }
+
+            if (Model.GlobalVariableDescription != null)
+            {
+            <dt>
+                Description
+            </dt>
+
+            <dd class="detail">
+                @Html.DisplayFor(model => model.GlobalVariableDescription)
+            </dd>
+            }
+        }
+        @if (Model.Examples != null)
+        {
+        <dt>
+            Examples
+        </dt>
+
+        <dd class="detail">
+            @Html.DisplayFor(model => model.Examples)
+        </dd>
+        }
+
+        @if (Model.RelatedGlobal != null)
+        {
+        <dt>
+            Related Global Variables
+        </dt>
+
+        <dd class="detail">
+            @Html.DisplayFor(model => model.RelatedGlobal)
+        </dd>
+        }
+
+        @if (Model.RelatedCommand != null)
+        {
+        <dt>
+            Related Commands
+        </dt>
+
+        <dd class="detail">
+            @Html.DisplayFor(model => model.RelatedCommand)
+        </dd>
+        }
+
+        @if (Model.RelatedTopics != null)
+        {
+        <dt>
+            Related Topics
+        </dt>
+
+        <dd class="detail">
+            @Html.DisplayFor(model => model.RelatedTopics)
+        </dd>
+        }
+    </dl>
+</div>
+@*<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
