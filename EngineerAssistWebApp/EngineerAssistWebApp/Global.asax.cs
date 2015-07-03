@@ -1,4 +1,5 @@
-﻿using EngineerAssistWebApp.Models;
+﻿using SolrNet;
+using EngineerAssistWebApp.Models;
 using EngineerAssistWebApp.Utils;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace EngineerAssistWebApp
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            SolrNet.Startup.Init<CommandModels>("http://localhost:8983/solr");
+            Startup.Init<CommandModels>("http://localhost:8983/solr");
         }
     }
 }
