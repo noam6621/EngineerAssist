@@ -53,3 +53,7 @@ will
 with
 i
 do
+how
+what
+were
+where
