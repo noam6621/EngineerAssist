@@ -49,3 +49,15 @@ textarea {
     border-bottom: 2px solid black;
     padding-bottom: 5px;
 }
+.logo-image
+{
+    display: block;
+    width: 100px;
+    height: auto;
+}
+.logo-image-big
+{
+    display: block;
+    width: 400px;
+    height: auto;
+}

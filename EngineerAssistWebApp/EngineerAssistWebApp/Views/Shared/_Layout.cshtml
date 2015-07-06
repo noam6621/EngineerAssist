@@ -16,7 +16,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("EngineerAssist", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @*@Html.ActionLink("EngineerAssist", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                
+                <a href="@Url.Action("Index", "Home")" class="navbar-brand">
+                    <img alt="EngineerAssist" src="@Url.Content("~/Content/images/engineer_assist_logo-01.png")" class="logo-image">
+                </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">

@@ -2000,6 +2000,7 @@ textarea.input-lg {
 .btn {
   display: inline-block;
   padding: 6px 12px;
+  margin-left: 9px;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: normal;
@@ -4940,6 +4941,10 @@ a.list-group-item.active > .badge,
 .jumbotron h1 {
   line-height: 1;
   color: inherit;
+}
+.jumbotron h3 {
+  margin-right: 21px;
+  margin-left: 21px;
 }
 
 .jumbotron p {
