@@ -16480,3 +16480,48 @@ INFO  - 2015-07-05 17:08:21.705; org.apache.solr.core.SolrCore; [collection1] we
 INFO  - 2015-07-05 17:08:49.996; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=how+to+delete+a+repeater&rows=100000000&version=2.2} hits=201 status=0 QTime=110 
 INFO  - 2015-07-05 17:08:56.730; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=delete_clock_tree_repeaters&rows=100000000&version=2.2} hits=1 status=0 QTime=0 
 INFO  - 2015-07-05 17:09:31.232; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=ecoDeleteRepeater&rows=100000000&version=2.2} hits=3 status=0 QTime=0 
+INFO  - 2015-07-05 19:47:27.863; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1436114847821} status=0 QTime=30 
+INFO  - 2015-07-05 19:47:27.929; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={wt=json&_=1436114847905} status=0 QTime=2 
+INFO  - 2015-07-05 19:47:31.508; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-top.html&contentType=text/html;charset%3Dutf-8&_=1436114851453} status=0 QTime=3 
+INFO  - 2015-07-05 19:47:31.509; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-bottom.html&contentType=text/html;charset%3Dutf-8&_=1436114851458} status=0 QTime=3 
+INFO  - 2015-07-05 19:47:31.569; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=index&numTerms=0&wt=json&_=1436114851522} status=0 QTime=1 
+INFO  - 2015-07-05 19:47:31.574; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/system params={wt=json&_=1436114851541} status=0 QTime=3 
+INFO  - 2015-07-05 19:47:31.584; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={action=status&wt=json&_=1436114851551} status=503 QTime=1 
+INFO  - 2015-07-05 19:47:31.578; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.html&_=1436114851546} status=0 QTime=1 
+INFO  - 2015-07-05 19:47:31.578; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/replication params={wt=json&command=details&_=1436114851537} status=0 QTime=10 
+INFO  - 2015-07-05 19:47:33.300; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1436114853255} status=0 QTime=2 
+INFO  - 2015-07-05 19:47:46.647; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1436114866603} status=0 QTime=3 
+INFO  - 2015-07-05 19:47:46.751; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/analysis/field params={analysis.showmatch=true&analysis.fieldname=_root_&wt=json&analysis.query=How+to+delete+a+repeater&_=1436114866720} status=0 QTime=1 
+INFO  - 2015-07-05 19:47:53.884; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1436114873843} status=0 QTime=3 
+INFO  - 2015-07-05 19:47:54.120; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/analysis/field params={analysis.showmatch=true&analysis.fieldname=command_parameters&wt=json&analysis.query=How+to+delete+a+repeater&_=1436114873945} status=0 QTime=138 
+INFO  - 2015-07-05 19:51:09.474; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1436115069431} status=0 QTime=3 
+INFO  - 2015-07-05 19:51:09.570; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/analysis/field params={analysis.showmatch=true&analysis.fieldname=category&wt=json&analysis.query=How+to+delete+a+repeater&_=1436115069538} status=0 QTime=2 
+INFO  - 2015-07-05 19:51:42.613; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1436115102351} status=0 QTime=235 
+INFO  - 2015-07-05 19:51:42.648; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1436115102638} status=0 QTime=3 
+INFO  - 2015-07-05 19:52:28.683; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={fl=command_description&wt=json&_=1436115148592} status=0 QTime=83 
+INFO  - 2015-07-05 19:52:54.288; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={fl=command_description&numTerms=25&wt=json&_=1436115174267} status=0 QTime=9 
+INFO  - 2015-07-05 19:53:34.126; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1436115214077} status=0 QTime=6 
+INFO  - 2015-07-05 19:53:34.149; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1436115214140} status=0 QTime=2 
+INFO  - 2015-07-05 19:53:35.780; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={fl=command_syntax&wt=json&_=1436115215701} status=0 QTime=72 
+INFO  - 2015-07-05 19:53:49.464; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=command_syntax:[*+TO+*]&indent=true&wt=json&_=1436115229256} hits=1479 status=0 QTime=100 
+INFO  - 2015-07-05 19:54:08.943; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1436115248898} status=0 QTime=4 
+INFO  - 2015-07-05 19:54:08.998; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1436115248974} status=0 QTime=2 
+INFO  - 2015-07-05 19:54:25.984; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&wt=json&_=1436115265823} status=0 QTime=119 
+INFO  - 2015-07-05 19:54:31.544; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file params={wt=json&_=1436115271383} status=0 QTime=136 
+INFO  - 2015-07-05 19:54:35.844; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={wt=json&ts=1436115275836&_=1436115275837} hits=0 status=0 QTime=3 
+INFO  - 2015-07-05 19:54:35.846; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={wt=json&ts=1436115275836&_=1436115275837} status=0 QTime=5 
+INFO  - 2015-07-05 19:54:37.769; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/mbeans params={stats=true&wt=json&_=1436115277591} status=0 QTime=146 
+INFO  - 2015-07-05 19:54:46.436; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/replication params={wt=json&command=details&_=1436115286383} status=0 QTime=7 
+INFO  - 2015-07-05 20:24:23.906; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1436117063876} status=0 QTime=1 
+INFO  - 2015-07-05 20:24:23.971; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={wt=json&_=1436117063949} status=0 QTime=2 
+INFO  - 2015-07-05 20:24:25.896; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-top.html&contentType=text/html;charset%3Dutf-8&_=1436117065850} status=0 QTime=2 
+INFO  - 2015-07-05 20:24:25.898; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-bottom.html&contentType=text/html;charset%3Dutf-8&_=1436117065855} status=0 QTime=1 
+INFO  - 2015-07-05 20:24:26.022; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=index&numTerms=0&wt=json&_=1436117065950} status=0 QTime=1 
+INFO  - 2015-07-05 20:24:26.028; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/replication params={wt=json&command=details&_=1436117065968} status=0 QTime=8 
+INFO  - 2015-07-05 20:24:26.027; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/system params={wt=json&_=1436117065974} status=0 QTime=4 
+INFO  - 2015-07-05 20:24:26.025; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.html&_=1436117065979} status=0 QTime=1 
+INFO  - 2015-07-05 20:24:26.024; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={action=status&wt=json&_=1436117065986} status=503 QTime=0 
+INFO  - 2015-07-05 20:24:27.253; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1436117067194} status=0 QTime=2 
+INFO  - 2015-07-05 20:24:46.352; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1436117086319} status=0 QTime=2 
+INFO  - 2015-07-05 20:24:46.443; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/analysis/field params={analysis.showmatch=true&analysis.fieldname=command_name&wt=json&analysis.query=How+to+delete+a+repeater&_=1436117086409} status=0 QTime=5 
+INFO  - 2015-07-06 01:31:38.868; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=fgnnnn&rows=100000000&version=2.2} hits=0 status=0 QTime=3 
